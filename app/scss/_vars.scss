@@ -1,0 +1,55 @@
+// === MIXIN ===
+
+@mixin resetBtn {
+    // padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+// === FONT ===
+
+@mixin Roboto($weight) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: $weight;
+}
+
+@mixin Circle($weight) {
+    font-family: 'Circle', sans-serif;
+    font-weight: $weight;
+}
+
+@mixin ArnoPro($weight) {
+    font-family: 'Arno Pro Display', sans-serif;
+    font-weight: $weight;
+}
+
+// === FONT-SIZE ===
+
+$fs-xs: 18px;
+$fs-s: 20px;
+$fs-m: 24px;
+$fs-l: 30px;
+$fs-xl: 55px;
+$fs-xxl: 65px;
+
+// === FONT-WEIGHT ===
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+
+// === COLOR ===
+
+$primary: #ca6d38;
+
+$dark-50: #181818;
+$dark-100: #454545;
+
+$light-50:#fff;
+$light-100:#f3f1ef;
+$light-200:#dfd7d3;
+$light-300: #dbdbdb;
+
+// === ANIMATION ===
+$transition: all .3s ease-in-out;

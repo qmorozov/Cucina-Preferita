@@ -1,0 +1,175 @@
+@import '_vars';
+@import '_fonts';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+div {
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    @include Roboto($weight: $fw-regular);
+}
+
+.container {
+    max-width: 1259px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: block;
+    max-width: 100%;
+    padding: 24px;
+    @include resetBtn;
+
+    .btn-text {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        @include Circle($weight: $fw-regular);
+    }
+
+    &-no-bg {
+        position: relative;
+        width: 400px;
+        color: $light-50;
+        border: 2px solid $light-300;
+        border-right: none;
+        transition: $transition;
+
+        .btn-text {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                left: calc(100% - -18px);
+                width: 66px;
+                height: 10px;
+                content: "";
+                background: url('../images/icons/arrow-right.svg') no-repeat;
+                transition: $transition;
+                transform: translateY(-50%);
+            }
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            right: 0;
+            width: 2px;
+            height: 30%;
+            content: "";
+            background-color: $light-300;
+            transition: $transition;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &:hover {
+            border-color: $primary;
+
+            &::before,
+            &::after {
+                background-color: $primary;
+            }
+
+            .btn-text::before {
+                left: calc(100% - -30px);
+            }
+        }
+
+        &:active {
+            border-color: $light-300;
+
+            &::before,
+            &::after {
+                background-color: $light-300;
+            }
+
+            .btn-text::before {
+                left: calc(100% - -10px);
+            }
+        }
+    }
+
+    &-bg {
+        width: 400px;
+        color: $dark-50;
+        background-color: $light-200;
+        transition: $transition;
+
+        &:hover {
+            box-shadow: 0 0 30px rgba($light-200, 0.2);
+        }
+
+        &:active {
+            box-shadow: 0 0 15px rgba($light-200, 0.1);
+        }
+    }
+
+    &-standart {
+        width: 275px;
+        border: 2px solid $light-200;
+        transition: $transition;
+
+        .btn-text {
+            color: $dark-100;
+        }
+
+        &:hover {
+            border-color: $primary;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+}
+
+@import '_media';

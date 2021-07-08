@@ -1,0 +1,83 @@
+// === ROBOTO ===
+
+@font-face {
+    // === LIGHT ===
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    // === LIGHT-ITALICK ===
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-LightItalic.woff2') format('woff2'), url('../fonts/Roboto/Roboto-LightItalic.woff') format('woff');
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    // === REGULAR ===
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    // === MEDIUM ===
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+// === / ROBOTO ====
+
+// === CIRCLE ===
+
+@font-face {
+    // === LIGHT ===
+    font-family: 'Circle';
+    src: url('../fonts/Circle/Circe-Light.woff2') format('woff2'), url('../fonts/Circle/Circe-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    // === REGULAR ===
+    font-family: 'Circle';
+    src: url('../fonts/Circle/Circe-Regular.woff2') format('woff2'), url('../fonts/Circle/Circe-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+// === / CIRCLE ===
+
+// === ARNO PRO DISPLAY ===
+
+@font-face {
+    // === LIGHT-DISPLAY ===
+    font-family: 'Arno Pro Display';
+    src: url('../fonts/ArnoPro/ArnoPro-LightDisplay.woff2') format('woff2'), url('../fonts/ArnoPro/ArnoPro-LightDisplay.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    // === REGULAR ===
+    font-family: 'Arno Pro Display';
+    src: url('../fonts/ArnoPro/ArnoPro-Display.woff2') format('woff2'), url('../fonts/ArnoPro/ArnoPro-Display.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+// === / ARNO PRO DISPLAY ===
