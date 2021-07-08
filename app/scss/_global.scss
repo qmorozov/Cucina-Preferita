@@ -45,6 +45,9 @@ h6 {
 }
 
 body {
+    padding-top: 70px;
+    color: $dark-50;
+
     @include Roboto($weight: $fw-regular);
 }
 

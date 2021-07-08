@@ -5,6 +5,7 @@
         "number-leading-zero": null,
         "no-invalid-position-at-import-rule": null,
         "at-rule-empty-line-before": null,
+        "no-descending-specificity": null,
         "at-rule-no-unknown": [true, {
             "ignoreAtRules": ["include", "mixin"]
         }]
