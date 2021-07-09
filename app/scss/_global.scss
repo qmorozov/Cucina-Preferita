@@ -1,7 +1,9 @@
 @import '_vars';
 @import '_fonts';
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -45,10 +47,18 @@ h6 {
 }
 
 body {
-    padding-top: 70px;
+    font-size: $fs-m;
+    line-height: 32px;
     color: $dark-50;
-
     @include Roboto($weight: $fw-regular);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+    overflow: hidden;
 }
 
 .container {
