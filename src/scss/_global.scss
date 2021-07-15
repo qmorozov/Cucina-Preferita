@@ -1,5 +1,6 @@
-@import '_vars';
-@import '_fonts';
+@import "fonts";
+@import "vars";
+@import "mixin";
 
 *,
 *::after,
@@ -184,5 +185,3 @@ body {
         }
     }
 }
-
-@import '_media';

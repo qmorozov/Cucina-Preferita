@@ -1,6 +1,7 @@
-@import '_vars';
-@import '_global';
-@import '_fonts';
+@import "fonts";
+@import "mixin";
+@import "vars";
+@import "global";
 
 .logo__img {
     // width: 100%;
@@ -402,4 +403,4 @@
     }
 }
 
-@import '_media';
+@import "media";

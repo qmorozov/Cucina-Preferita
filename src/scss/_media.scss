@@ -1,5 +1,6 @@
-@import '_vars';
-@import '_fonts';
+@import "mixin";
+@import "fonts";
+@import "vars";
 
 @media (max-width: 1200px) {
     // === GLOBAL ===
