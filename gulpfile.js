@@ -63,7 +63,7 @@ const styles = () => {
 const styleLibs = () => {
     return src([
             'node_modules/normalize.css/normalize.css',
-            'node_modules/swiper/swiper-bundle.min.css'
+            // 'node_modules/swiper/swiper-bundle.min.css'
         ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
@@ -73,7 +73,7 @@ const styleLibs = () => {
 // === PLUG IN LIBS JS ===
 const scriptLibs = () => {
     return src([
-            'node_modules/swiper/swiper-bundle.min.js',
+            // 'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/lazysizes/lazysizes.min.js'
         ])
         .pipe(concat('libs.min.js'))

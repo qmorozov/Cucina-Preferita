@@ -68,6 +68,48 @@ body {
     margin: 0 auto;
 }
 
+.section-outer {
+    margin-bottom: 120px;
+
+    &--small {
+        margin-bottom: 100px;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: $fs-xl;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    @include ArnoPro($weight: 300);
+
+    &::before,
+    &::after {
+        width: 60vw;
+        height: 2px;
+        margin: 0 60px;
+        content: '';
+        background: $light-200;
+    }
+
+    &::before {
+        margin-left: -20vw;
+    }
+
+    &::after {
+        margin-right: -20vw;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 650px;
+    }
+}
+
 .btn {
     display: block;
     max-width: 100%;

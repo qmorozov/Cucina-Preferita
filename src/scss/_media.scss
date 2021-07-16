@@ -13,6 +13,11 @@
         margin-left: 20px;
     }
 
+    .title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
     // === HEADER ===
     .header-contact {
         margin-left: 25px;
@@ -27,6 +32,11 @@
 
     .contact-phone__text {
         padding-left: 20px;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 40px;
     }
 
     // === MENU ===
@@ -73,7 +83,51 @@
     }
 }
 
+@media (max-width: 900px) {
+    // === GLOBAL +==
+    .title {
+        font-size: 30px;
+        line-height: 30px;
+
+        &__text {
+            max-width: 450px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .preference {
+        &-top {
+            margin-bottom: 25px;
+        }
+
+        &-items {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-item {
+            text-align: center;
+
+            & + & {
+                margin-top: 25px;
+            }
+
+            &__img {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
 @media (max-width: 800px) {
+    // === GLOBAL ===
+    .title {
+        &::before,
+        &::after {
+            width: 70vw;
+        }
+    }
     // === FOOTER ===
     .footer {
         &-inner {
@@ -110,7 +164,40 @@
     }
 }
 
+@media (max-width: 700px) {
+    // === GLOBAL ===
+    .title {
+        font-size: 30px;
+        line-height: 30px;
+
+        &::before,
+        &::after {
+            width: 20vw;
+        }
+
+        &__text {
+            max-width: 350px;
+        }
+    }
+    // === PREFERENCE ===
+    .preference {
+        .title {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
+}
+
 @media (max-width: 600px) {
+    // === GLOBAL ===
+    .section-outer,
+    .section-outer--small {
+        margin-bottom: 50px;
+    }
     // === INTRO ===
     .intro {
         &::before {
@@ -131,6 +218,11 @@
             margin-top: 40px;
         }
     }
+    // === PREFERENCE ===
+    .preference__text {
+        font-size: 18px;
+        line-height: 26px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -141,6 +233,28 @@
         &-no-bg .btn-text::before {
             width: 35px;
             background: url('../images/icons/arrow-right-small.svg');
+        }
+    }
+
+    .title {
+        font-size: 25px;
+        line-height: 25px;
+
+        &::before,
+        &::after {
+            margin: 0 16px;
+        }
+
+        &::before {
+            margin-left: -20vw;
+        }
+
+        &::after {
+            margin-right: -20vw;
+        }
+
+        &__text {
+            max-width: 250px;
         }
     }
 }
@@ -159,6 +273,25 @@
         }
     }
 
+    .title {
+        &::before,
+        &::after {
+            width: 30vw;
+        }
+
+        &::before {
+            margin-left: -30vw;
+        }
+
+        &::after {
+            margin-right: -30vw;
+        }
+
+        &__text {
+            max-width: 165px;
+        }
+    }
+
     // === INTRO ===
     .intro {
         &::before {
@@ -174,6 +307,10 @@
             font-size: $fs-s;
             line-height: 26px;
         }
+    }
+    // === PREFERENCE ===
+    .preference__text {
+        max-width: 350px;
     }
 }
 
@@ -201,5 +338,9 @@
         &__btn {
             margin-top: 25px;
         }
+    }
+    // === PREFERENCE ===
+    .preference__text {
+        max-width: 290px;
     }
 }

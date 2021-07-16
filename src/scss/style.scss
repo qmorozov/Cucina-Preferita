@@ -89,7 +89,7 @@
 
     &__img {
         position: absolute;
-        top: 0;
+        top: -2px;
         width: 15px;
         height: 15px;
     }
@@ -361,7 +361,9 @@
 .intro {
     position: relative;
     height: calc(100vh - 70px);
-    background: url('../images/content/intro-bg.jpg') no-repeat top center;
+    // background: url('../images/content/intro-bg.jpg') no-repeat top center;
+    background-repeat: no-repeat;
+    background-position: top center;
     background-size: cover;
 
     &::before {
@@ -400,6 +402,51 @@
 
     &__btn {
         margin-top: 96px;
+    }
+}
+
+// === PREFERENCE ===
+
+.preference {
+    &-top {
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+        font-size: 24px;
+        font-weight: 350;
+        line-height: 32px;
+        text-align: center;
+        @include Circle($weight: 300);
+    }
+
+    &-items {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &-item {
+        width: 100%;
+        max-width: 255px;
+
+        &__img {
+            margin-bottom: 30px;
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+            }
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 30px;
+            @include Circle($weight: 400);
+        }
     }
 }
 
