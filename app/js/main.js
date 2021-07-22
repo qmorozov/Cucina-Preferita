@@ -1,6 +1,185 @@
-!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s="./src/js/main.js")}({"./src/js/main.js":
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
-/*! no static exports found */function(module,exports){eval("var btn = document.querySelector('.burger-btn'),\n    header = document.querySelector('.header');\nbtn.addEventListener('click', function () {\n  header.classList.toggle('header--active');\n\n  if (header.classList.contains('header--active')) {\n    hideScroll();\n  } else {\n    showScroll();\n  }\n});\n\nvar hideScroll = function hideScroll() {\n  var scrollWidth = \"\".concat(getScrollbarWidth(), \"px\");\n  document.body.style.paddingRight = scrollWidth;\n  document.body.style.overflow = 'hidden';\n  document.getElementById('header').style.paddingRight = scrollWidth;\n};\n\nvar showScroll = function showScroll() {\n  document.body.style.paddingRight = '';\n  document.body.style.overflow = 'visible';\n  document.getElementById('header').style.paddingRight = '';\n};\n\nvar getScrollbarWidth = function getScrollbarWidth() {\n  var outer = document.createElement('div');\n  outer.style.position = 'absolute';\n  outer.style.top = '-9999px';\n  outer.style.width = '50px';\n  outer.style.height = '50px';\n  outer.style.overflow = 'scroll';\n  outer.style.visibility = 'hidden';\n  document.body.appendChild(outer);\n  var ScrollBarWidth = outer.offsetWidth - outer.clientWidth;\n  document.body.removeChild(outer);\n  return ScrollBarWidth;\n};\n\n//# sourceURL=webpack:///./src/js/main.js?")}});
+const btn = document.querySelector('.burger-btn'),
+    header = document.querySelector('.header');
+btn.addEventListener('click', function() {
+    header.classList.toggle('header--active')
+    if (header.classList.contains('header--active')) {
+        hideScroll();
+    } else {
+        showScroll();
+    }
+});
+
+
+const hideScroll = () => {
+    const scrollWidth = `${getScrollbarWidth()}px`;
+    document.body.style.paddingRight = scrollWidth;
+    document.body.style.overflow = 'hidden';
+
+    document.getElementById('header').style.paddingRight = scrollWidth;
+};
+
+const showScroll = () => {
+    document.body.style.paddingRight = '';
+    document.body.style.overflow = 'visible';
+
+    document.getElementById('header').style.paddingRight = '';
+};
+
+const getScrollbarWidth = () => {
+    const outer = document.createElement('div');
+
+    outer.style.position = 'absolute';
+    outer.style.top = '-9999px';
+    outer.style.width = '50px';
+    outer.style.height = '50px';
+    outer.style.overflow = 'scroll';
+    outer.style.visibility = 'hidden';
+
+    document.body.appendChild(outer);
+    const ScrollBarWidth = outer.offsetWidth - outer.clientWidth;
+    document.body.removeChild(outer);
+
+    return ScrollBarWidth;
+};
+
+// === TABS ===
+
+const tabs = document.querySelectorAll('.tabs');
+
+function tabCLick (wrapper) {
+    wrapper.forEach(function (box) {
+        const tabsItem = box.querySelectorAll('.tabs-triggers__item');
+        const itemContent = box.querySelectorAll('.tabs-content__item');
+    
+        tabsItem.forEach(onTabClick);
+    
+        function onTabClick(item) {
+            item.addEventListener('click', function (e) {
+            e.preventDefault();
+        
+            const id = e.target.getAttribute('href').replace('#', '');
+    
+            tabsItem.forEach(
+                (child) => child.classList.remove('tabs-triggers__item--active')
+            );
+            itemContent.forEach(
+                (child) => child.classList.remove('tabs-content__item--active')
+            );
+    
+            item.classList.add('tabs-triggers__item--active');
+            document.getElementById(id).classList.add('tabs-content__item--active');
+    
+            });
+        };
+
+        tabsItem[0].click();
+    });
+};
+
+tabCLick(tabs);
+
+// === FILTER ===
+
+// const filterItemContent = document.querySelectorAll('.filter-content__item');
+// const filterItem = document.querySelectorAll('.filter-item');
+
+// document.querySelector('.filter-items').addEventListener('click', event => {
+//     if (event.target.tagName !== 'LI') return false;
+    
+//     filterItem.forEach(
+//         (childe) => childe.classList.remove('filter-item--active')    
+//     );
+    
+//     event.target.classList.add('filter-item--active');
+        
+//     let filterClass = event.target.dataset['filter'];
+    
+    
+//     filterItemContent.forEach(elem => {
+//         elem.classList.remove('hide')
+//         if (elem.classList.contains(filterClass) && filterClass !== 'all') {
+//             elem.classList.add('hide')
+//         }
+//     });
+
+// })
+
+// === MIXTUP ==
+
+// let mixer = mixitup('.filter-content');
+
+// const filterItem = document.querySelectorAll('.filter-item');
+
+// filterItem.forEach(function(item) {
+//     item.addEventListener('click', function() {
+//         filterItem.forEach(
+//             (child) => child.classList.remove('filter-item--active')
+//         );
+//         item.classList.add('filter-item--active');
+//     });
+//     filterItem[0].click();
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const subTabs = document.querySelectorAll('.subtabs');
+
+// SubTabCLick(subTabs);
+
+// function SubTabCLick (wrapper) {
+//     wrapper.forEach(function (box) {
+//         const item = box.querySelectorAll('.subtabs-triggers__item');
+//         const itemContent = box.querySelectorAll('.subtabs-content__item');
+    
+//         item.forEach(onTabClick);
+    
+//         function onTabClick(item) {
+//             item.addEventListener('click', function (e) {
+//             e.preventDefault();
+        
+//             const id = e.target.getAttribute('href').replace('#', '');
+    
+//             box.querySelectorAll('.subtabs-triggers__item').forEach(
+//                 (child) => child.classList.remove('subtabs-triggers__item--active')
+//             );
+//             box.querySelectorAll('.subtabs-content__item').forEach(
+//                 (child) => child.classList.remove('subtabs-content__item--active')
+//             );
+    
+//             item.classList.add('subtabs-triggers__item--active');
+//             document.getElementById(id).classList.add('subtabs-content__item--active');
+    
+//             console.log(item);
+//             });
+//         };
+//     });
+// };
+
+
+
+
 //# sourceMappingURL=main.js.map

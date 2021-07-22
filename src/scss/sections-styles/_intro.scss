@@ -1,0 +1,49 @@
+// === INTRO ===
+
+.intro {
+    position: relative;
+    height: calc(100vh - 70px);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    &::before {
+        position: absolute;
+        z-index: 0;
+        width: 55%;
+        height: 100%;
+        content: "";
+        background: url('../images/default/bg.png');
+    }
+
+    &-content {
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        color: #fff;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        width: 100%;
+        max-width: 630px;
+        font-size: $fs-xxl;
+        line-height: 65px;
+        @include ArnoPro($weight: 300);
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 495px;
+        margin-top: 50px;
+        font-size: $fs-m;
+        line-height: 32px;
+        @include Circle($weight: 300);
+    }
+
+    &__btn {
+        margin-top: 96px;
+    }
+}
+
+// === / INTRO ==

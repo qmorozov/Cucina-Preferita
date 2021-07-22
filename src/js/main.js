@@ -7,7 +7,7 @@ btn.addEventListener('click', function() {
     } else {
         showScroll();
     }
-})
+});
 
 
 const hideScroll = () => {
@@ -41,3 +41,143 @@ const getScrollbarWidth = () => {
 
     return ScrollBarWidth;
 };
+
+// === TABS ===
+
+const tabs = document.querySelectorAll('.tabs');
+
+function tabCLick (wrapper) {
+    wrapper.forEach(function (box) {
+        const tabsItem = box.querySelectorAll('.tabs-triggers__item');
+        const itemContent = box.querySelectorAll('.tabs-content__item');
+    
+        tabsItem.forEach(onTabClick);
+    
+        function onTabClick(item) {
+            item.addEventListener('click', function (e) {
+            e.preventDefault();
+        
+            const id = e.target.getAttribute('href').replace('#', '');
+    
+            tabsItem.forEach(
+                (child) => child.classList.remove('tabs-triggers__item--active')
+            );
+            itemContent.forEach(
+                (child) => child.classList.remove('tabs-content__item--active')
+            );
+    
+            item.classList.add('tabs-triggers__item--active');
+            document.getElementById(id).classList.add('tabs-content__item--active');
+    
+            });
+        };
+
+        tabsItem[0].click();
+    });
+};
+
+tabCLick(tabs);
+
+// === FILTER ===
+
+// const filterItemContent = document.querySelectorAll('.filter-content__item');
+// const filterItem = document.querySelectorAll('.filter-item');
+
+// document.querySelector('.filter-items').addEventListener('click', event => {
+//     if (event.target.tagName !== 'LI') return false;
+    
+//     filterItem.forEach(
+//         (childe) => childe.classList.remove('filter-item--active')    
+//     );
+    
+//     event.target.classList.add('filter-item--active');
+        
+//     let filterClass = event.target.dataset['filter'];
+    
+    
+//     filterItemContent.forEach(elem => {
+//         elem.classList.remove('hide')
+//         if (elem.classList.contains(filterClass) && filterClass !== 'all') {
+//             elem.classList.add('hide')
+//         }
+//     });
+
+// })
+
+// === MIXTUP ==
+
+// let mixer = mixitup('.filter-content');
+
+// const filterItem = document.querySelectorAll('.filter-item');
+
+// filterItem.forEach(function(item) {
+//     item.addEventListener('click', function() {
+//         filterItem.forEach(
+//             (child) => child.classList.remove('filter-item--active')
+//         );
+//         item.classList.add('filter-item--active');
+//     });
+//     filterItem[0].click();
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const subTabs = document.querySelectorAll('.subtabs');
+
+// SubTabCLick(subTabs);
+
+// function SubTabCLick (wrapper) {
+//     wrapper.forEach(function (box) {
+//         const item = box.querySelectorAll('.subtabs-triggers__item');
+//         const itemContent = box.querySelectorAll('.subtabs-content__item');
+    
+//         item.forEach(onTabClick);
+    
+//         function onTabClick(item) {
+//             item.addEventListener('click', function (e) {
+//             e.preventDefault();
+        
+//             const id = e.target.getAttribute('href').replace('#', '');
+    
+//             box.querySelectorAll('.subtabs-triggers__item').forEach(
+//                 (child) => child.classList.remove('subtabs-triggers__item--active')
+//             );
+//             box.querySelectorAll('.subtabs-content__item').forEach(
+//                 (child) => child.classList.remove('subtabs-content__item--active')
+//             );
+    
+//             item.classList.add('subtabs-triggers__item--active');
+//             document.getElementById(id).classList.add('subtabs-content__item--active');
+    
+//             console.log(item);
+//             });
+//         };
+//     });
+// };
+
+
+

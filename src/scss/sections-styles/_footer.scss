@@ -1,0 +1,101 @@
+// === FOOTER ===
+
+.footer {
+    padding: 54px 0 62px 0;
+    margin-top: auto;
+    background-color: $dark-200;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        color: $light-50;
+    }
+
+    &-contact {
+        display: inline-block;
+
+        &.contact-phone path {
+            fill: $light-50;
+            transition: $transition;
+        }
+
+        .contact-phone__img {
+            top: -6px;
+            left: 0;
+        }
+
+        &__item + &__item {
+            margin-top: 15px;
+        }
+    }
+
+    .contact-phone:hover path {
+        fill: $primary;
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 280px;
+
+        &__list {
+            width: 100%;
+            max-width: 110px;
+        }
+
+        &__item + &__item {
+            margin-top: 20px;
+        }
+
+        &__link {
+            font-size: $fs-s;
+            line-height: 25px;
+            transition: $transition;
+            @include ArnoPro($weight: 400);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    &-copyright-info {
+        width: 254px;
+        font-size: $fs-xs;
+        line-height: 26px;
+        color: rgba($light-50, 0.5);
+        @include Circle($weight: 350);
+    }
+
+    &-copyright {
+        margin-top: 36px;
+    }
+
+    &-confidentiality,
+    &-mobile-confidentiality {
+        display: inline-block;
+        margin-top: 10px;
+        border-bottom: 1px solid rgba(rgb(133, 103, 103), 0.5);
+        transition: $transition;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &-mobile-info {
+        display: none;
+        width: 290px;
+        margin-top: 30px;
+        font-size: $fs-xs;
+        line-height: 26px;
+        color: rgba($light-50, 0.5);
+        @include Circle($weight: 350);
+    }
+}
+
+// === / FOOTER ===

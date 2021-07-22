@@ -74,7 +74,8 @@ const styleLibs = () => {
 const scriptLibs = () => {
     return src([
             // 'node_modules/swiper/swiper-bundle.min.js',
-            'node_modules/lazysizes/lazysizes.min.js'
+            'node_modules/lazysizes/lazysizes.min.js',
+            'node_modules/mixitup/dist/mixitup.min.js'
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify().on("error", notify.onError()))
@@ -113,30 +114,8 @@ const clean = () => {
 // === MINIFY OF ALL JS FILES ===
 const scripts = () => {
     return src('./src/js/main.js')
-        .pipe(webpackStream({
-            mode: 'development',
-            output: {
-                filename: 'main.js',
-            },
-            module: {
-                rules: [{
-                    test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env']
-                        }
-                    }
-                }]
-            },
-        }))
-        .on('error', function(err) {
-            console.error('WEBPACK ERROR', err);
-            this.emit('end');
-        })
         .pipe(sourcemaps.init())
-        .pipe(uglify().on("error", notify.onError()))
+        // .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(dest('./app/js'))
         .pipe(browserSync.stream());

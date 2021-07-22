@@ -88,10 +88,6 @@
     .title {
         font-size: 30px;
         line-height: 30px;
-
-        &__text {
-            max-width: 450px;
-        }
     }
 }
 
@@ -167,27 +163,52 @@
 @media (max-width: 700px) {
     // === GLOBAL ===
     .title {
+        margin-bottom: 20px;
         font-size: 30px;
         line-height: 30px;
 
         &::before,
         &::after {
-            width: 20vw;
-        }
-
-        &__text {
-            max-width: 350px;
+            width: 30vw;
         }
     }
     // === PREFERENCE ===
-    .preference {
-        .title {
-            margin-bottom: 20px;
+    .preference__text {
+        font-size: 20px;
+        line-height: 27px;
+    }
+    // === PORFOLIO ===
+    .portfolio {
+        &-content {
+            display: block;
         }
 
-        &__text {
-            font-size: 20px;
-            line-height: 27px;
+        &__item {
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: 450px;
+                height: 100%;
+                max-height: 450px;
+            }
+
+            & + & {
+                margin-top: 10px;
+            }
+
+            &:nth-child(6n + 1),
+            &:nth-child(6n + 2),
+            &:nth-child(6n + 3) {
+                grid-column: span 1;
+            }
+
+            &:nth-child(6n + 4),
+            &:nth-child(6n + 5),
+            &:nth-child(6n + 6) {
+                display: none;
+                grid-column: span 1;
+            }
         }
     }
 }
@@ -252,10 +273,6 @@
         &::after {
             margin-right: -20vw;
         }
-
-        &__text {
-            max-width: 250px;
-        }
     }
 }
 
@@ -292,6 +309,20 @@
         }
     }
 
+    .tabs {
+        &-triggers {
+            margin-bottom: 25px;
+
+            &__item {
+                font-size: 24px;
+                line-height: 26px;
+
+                & + & {
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
     // === INTRO ===
     .intro {
         &::before {
@@ -312,6 +343,13 @@
     .preference__text {
         max-width: 350px;
     }
+    // === PORFOLIO ===
+    .portfolio__item img {
+        width: 100%;
+        max-width: 350px;
+        height: 100%;
+        max-height: 350px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -320,6 +358,10 @@
         left: calc(100% - -7px);
     }
 
+    .tabs-triggers__item {
+        font-size: 18px;
+        line-height: 26px;
+    }
     // === INTRO ===
     .intro {
         &__title {
@@ -342,5 +384,11 @@
     // === PREFERENCE ===
     .preference__text {
         max-width: 290px;
+    }    // === PORFOLIO ===
+    .portfolio__item img {
+        width: 100%;
+        max-width: 290px;
+        height: 100%;
+        max-height: 290px;
     }
 }
