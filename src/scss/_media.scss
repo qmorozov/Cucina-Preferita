@@ -55,7 +55,6 @@
     .burger-btn {
         display: block;
     }
-
     // === HEADER ===
     .header-navigation {
         position: absolute;
@@ -79,6 +78,23 @@
             top: 6%;
             width: 100%;
             transform: translateY(0);
+        }
+    }
+    // === GIFT ===
+    .gift {
+        &-img img {
+            width: 500px;
+            height: 450px;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 45px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 25px;
         }
     }
 }
@@ -156,6 +172,35 @@
 
         &-mobile-info {
             display: block;
+        }
+    }
+    // === GIFT ===
+    .gift {
+        &-inner {
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+
+        &-info,
+        &-img {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &-img {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 55px;
+            line-height: 55px;
+        }
+
+        &__text {
+            font-size: 24px;
+            line-height: 35px;
         }
     }
 }
@@ -243,6 +288,13 @@
     .preference__text {
         font-size: 18px;
         line-height: 26px;
+    }
+    // === GIFT ===
+    .gift {
+        &__title {
+            font-size: 40px;
+            line-height: 40px;
+        }
     }
 }
 
@@ -349,6 +401,28 @@
         max-width: 350px;
         height: 100%;
         max-height: 350px;
+    }
+    // === GIFT ===
+    .gift {
+        &-img img {
+            width: 320px;
+            height: 300px;
+        }
+
+        &__title {
+            font-size: 25px;
+            line-height: 25px;
+        }
+
+        &__text {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        &__btn {
+            margin-top: 25px;
+        }
     }
 }
 

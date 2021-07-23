@@ -9,6 +9,14 @@
     border: none;
 }
 
+@mixin title {
+    font-size: $fs-xl;
+    line-height: 55px;
+    color: $light-50;
+    letter-spacing: 0.01em;
+    @include ArnoPro($weight: 300);
+}
+
 // === FONT ===
 
 @mixin Roboto($weight) {

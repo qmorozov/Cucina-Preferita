@@ -1,0 +1,109 @@
+// === PORTFOLIO ===
+
+.portfolio {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        z-index: -1;
+        width: 100%;
+        height: 50%;
+        content: "";
+        background-color: rgba($light-100, 0.8);
+        transform: translateY(-50%);
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(394px, 394px);
+        grid-auto-flow: row dense;
+        grid-gap: 10px;
+    }
+
+    &__item {
+        position: relative;
+        $parent: &;
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:nth-child(6n + 1) {
+            grid-column: span 2/ span 3;
+
+            #{$parent}-hover {
+                padding: 25px;
+            }
+        }
+
+        &:nth-child(6n + 2) {
+            grid-column: span 1/ span 4;
+        }
+
+        &:nth-child(6n + 3) {
+            grid-column: span 1/ span 5;
+        }
+
+        &:nth-child(6n + 4) {
+            grid-column: span 1/ span 2;
+        }
+
+        &:nth-child(6n + 5) {
+            grid-column: span 1/ span 3;
+        }
+
+        &:nth-child(6n + 6) {
+            grid-column: span 2/ span 5;
+
+            #{$parent}-hover {
+                padding: 25px;
+            }
+        }
+
+        &-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 25px 5px;
+            font-size: $fs-s;
+            line-height: 26px;
+            color: $light-50;
+            background: linear-gradient(0deg, rgba($dark-100, 0.65), rgba($dark-100, 0.65));
+            opacity: 0;
+            transition: $transition;
+            @include Circle($weight: 300);
+        }
+
+        &-title {
+            font-size: $fs-l;
+            line-height: 35px;
+            letter-spacing: 0.01em;
+            @include ArnoPro($weight: 400);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                #{$parent}-hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        margin: 50px auto 0;
+    }
+}
+
+// === / PORTFOLIO ===
