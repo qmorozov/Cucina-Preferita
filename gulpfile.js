@@ -47,7 +47,7 @@ const styles = () => {
             suffix: '.min'
         }))
         .pipe(autoprefixer({
-            cascade: false,
+            overrideBrowserslist: ['last 8 version']
         }))
         .pipe(cleanCSS({
             level: 2
@@ -63,7 +63,7 @@ const styles = () => {
 const styleLibs = () => {
     return src([
             'node_modules/normalize.css/normalize.css',
-            // 'node_modules/swiper/swiper-bundle.min.css'
+            'node_modules/swiper/swiper-bundle.min.css'
         ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
@@ -73,7 +73,7 @@ const styleLibs = () => {
 // === PLUG IN LIBS JS ===
 const scriptLibs = () => {
     return src([
-            // 'node_modules/swiper/swiper-bundle.min.js',
+            'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/lazysizes/lazysizes.min.js',
             'node_modules/mixitup/dist/mixitup.min.js'
         ])
@@ -167,7 +167,7 @@ const stylesBuild = () => {
             suffix: '.min'
         }))
         .pipe(autoprefixer({
-            cascade: false,
+            overrideBrowserslist: ['last 8 version']
         }))
         .pipe(cleanCSS({
             level: 2

@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
     @include('components/_head.html')
-
-<body>
-
-    <div class="wrapper">
-
-        <!-- HEADER -->
-        @include('components/_header.html')
-        <!-- / HEADER -->
-
-        <main>
-            
-            <!-- INTRO -->
-            @include('components/_intro.html')
-            <!-- / INTRO --> 
-
-            <!-- PREFERENCE -->
-            @include('components/_preference.html')
-            <!-- / PREFERENCE -->
-
-
-            <!-- PORTFOLIO -->
-            @include('components/_portfolioSection.html')
-            <!-- / PORTFOLIO -->
-
-            <!-- GIFT -->
-            @include('components/_gift.html')
-            <!-- / GIFT -->
-
-        </main>
-
-        <!-- FOOTER -->
-        @include('components/_footer.html')
-        <!-- / FOOTER -->
-
-    </div>
-
-    @include('components/_scripts.html')
-</body>
+    <body>
+        <div class="wrapper">
+            <!-- HEADER -->
+            @include('components/_header.html')
+            <!-- / HEADER -->
+            <main>
+                <!-- INTRO -->
+                @include('components/_intro.html')
+                <!-- / INTRO -->
+                <!-- PREFERENCE -->
+                @include('components/_preference.html')
+                <!-- / PREFERENCE -->
+                <!-- PORTFOLIO -->
+                @include('components/_portfolioSection.html')
+                <!-- / PORTFOLIO -->
+                <!-- GIFT -->
+                @include('components/_gift.html')
+                <!-- / GIFT -->
+                <!-- REVIEWS -->
+                @include('components/_reviews.html')
+                <!-- / REVIEWS -->
+            </main>
+            <!-- FOOTER -->
+            @include('components/_footer.html')
+            <!-- / FOOTER -->
+        </div>
+        @include('components/_scripts.html')
+    </body>
 </html>
-
 <!-- <section class="portfolio section-outer">
     <div class="container">
         <div class="portfolio-inner">

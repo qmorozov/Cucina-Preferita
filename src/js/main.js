@@ -1,6 +1,6 @@
 const btn = document.querySelector('.burger-btn'),
     header = document.querySelector('.header');
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     header.classList.toggle('header--active')
     if (header.classList.contains('header--active')) {
         hideScroll();
@@ -46,29 +46,29 @@ const getScrollbarWidth = () => {
 
 const tabs = document.querySelectorAll('.tabs');
 
-function tabCLick (wrapper) {
+function tabCLick(wrapper) {
     wrapper.forEach(function (box) {
         const tabsItem = box.querySelectorAll('.tabs-triggers__item');
         const itemContent = box.querySelectorAll('.tabs-content__item');
-    
+
         tabsItem.forEach(onTabClick);
-    
+
         function onTabClick(item) {
             item.addEventListener('click', function (e) {
-            e.preventDefault();
-        
-            const id = e.target.getAttribute('href').replace('#', '');
-    
-            tabsItem.forEach(
-                (child) => child.classList.remove('tabs-triggers__item--active')
-            );
-            itemContent.forEach(
-                (child) => child.classList.remove('tabs-content__item--active')
-            );
-    
-            item.classList.add('tabs-triggers__item--active');
-            document.getElementById(id).classList.add('tabs-content__item--active');
-    
+                e.preventDefault();
+
+                const id = e.target.getAttribute('href').replace('#', '');
+
+                tabsItem.forEach(
+                    (child) => child.classList.remove('tabs-triggers__item--active')
+                );
+                itemContent.forEach(
+                    (child) => child.classList.remove('tabs-content__item--active')
+                );
+
+                item.classList.add('tabs-triggers__item--active');
+                document.getElementById(id).classList.add('tabs-content__item--active');
+
             });
         };
 
@@ -85,16 +85,16 @@ tabCLick(tabs);
 
 // document.querySelector('.filter-items').addEventListener('click', event => {
 //     if (event.target.tagName !== 'LI') return false;
-    
+
 //     filterItem.forEach(
 //         (childe) => childe.classList.remove('filter-item--active')    
 //     );
-    
+
 //     event.target.classList.add('filter-item--active');
-        
+
 //     let filterClass = event.target.dataset['filter'];
-    
-    
+
+
 //     filterItemContent.forEach(elem => {
 //         elem.classList.remove('hide')
 //         if (elem.classList.contains(filterClass) && filterClass !== 'all') {
@@ -120,7 +120,30 @@ tabCLick(tabs);
 //     filterItem[0].click();
 // });
 
+// === SLIDER ===
 
+const mySwiper = new Swiper('.reviews-slider', {
+    slideClass: 'reviews-item',
+    wrapperClass: 'reviews-items',
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    simulateTouch: false,
+    spaceBetween: 160,
+    pagination: {
+        el: '.slider-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+    },
+    speed: 1000,
+    breakpoints: {
+        1000: {
+            simulateTouch: true
+        }
+    }
+});
 
 
 
@@ -154,25 +177,25 @@ tabCLick(tabs);
 //     wrapper.forEach(function (box) {
 //         const item = box.querySelectorAll('.subtabs-triggers__item');
 //         const itemContent = box.querySelectorAll('.subtabs-content__item');
-    
+
 //         item.forEach(onTabClick);
-    
+
 //         function onTabClick(item) {
 //             item.addEventListener('click', function (e) {
 //             e.preventDefault();
-        
+
 //             const id = e.target.getAttribute('href').replace('#', '');
-    
+
 //             box.querySelectorAll('.subtabs-triggers__item').forEach(
 //                 (child) => child.classList.remove('subtabs-triggers__item--active')
 //             );
 //             box.querySelectorAll('.subtabs-content__item').forEach(
 //                 (child) => child.classList.remove('subtabs-content__item--active')
 //             );
-    
+
 //             item.classList.add('subtabs-triggers__item--active');
 //             document.getElementById(id).classList.add('subtabs-content__item--active');
-    
+
 //             console.log(item);
 //             });
 //         };

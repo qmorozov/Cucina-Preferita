@@ -5,7 +5,7 @@
 @media (max-width: 1200px) {
     // === GLOBAL ===
     .contact-phone__text {
-        font-size: 20px;
+        font-size: $fs-s;
         line-height: 20px;
     }
 
@@ -21,6 +21,27 @@
     // === HEADER ===
     .header-contact {
         margin-left: 25px;
+    }
+
+    // === REVIEWS ===
+    .reviews {
+        &-item {
+            padding: 40px 40px 50px;
+        }
+
+        &-slider-photo {
+            top: 80px;
+            right: 30px;
+
+            img {
+                width: 500px;
+                height: 500px;
+            }
+        }
+
+        &-navigation {
+            left: 30px;
+        }
     }
 }
 
@@ -48,6 +69,44 @@
     .header-contact {
         margin-left: 20px;
     }
+
+    // === REVIEWS ===
+    .reviews {
+        &-slider {
+            width: 550px;
+            height: 870px;
+
+            &-photo {
+                top: auto;
+                right: 0;
+                bottom: -25%;
+                left: 0;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 420px;
+                    height: 260px;
+                }
+            }
+        }
+
+        &-item {
+            // display: block;
+            min-width: 500px;
+            height: 650px;
+        }
+
+        &-navigation {
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .slider-navigation {
+        width: 400px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -55,6 +114,7 @@
     .burger-btn {
         display: block;
     }
+
     // === HEADER ===
     .header-navigation {
         position: absolute;
@@ -80,6 +140,7 @@
             transform: translateY(0);
         }
     }
+
     // === GIFT ===
     .gift {
         &-img img {
@@ -93,7 +154,7 @@
         }
 
         &__text {
-            font-size: 20px;
+            font-size: $fs-s;
             line-height: 25px;
         }
     }
@@ -102,7 +163,7 @@
 @media (max-width: 900px) {
     // === GLOBAL +==
     .title {
-        font-size: 30px;
+        font-size: $fs-l;
         line-height: 30px;
     }
 }
@@ -140,6 +201,7 @@
             width: 70vw;
         }
     }
+
     // === FOOTER ===
     .footer {
         &-inner {
@@ -174,6 +236,7 @@
             display: block;
         }
     }
+
     // === GIFT ===
     .gift {
         &-inner {
@@ -194,12 +257,12 @@
         }
 
         &__title {
-            font-size: 55px;
+            font-size: $fs-xl;
             line-height: 55px;
         }
 
         &__text {
-            font-size: 24px;
+            font-size: $fs-m;
             line-height: 35px;
         }
     }
@@ -209,7 +272,7 @@
     // === GLOBAL ===
     .title {
         margin-bottom: 20px;
-        font-size: 30px;
+        font-size: $fs-l;
         line-height: 30px;
 
         &::before,
@@ -217,11 +280,13 @@
             width: 30vw;
         }
     }
+
     // === PREFERENCE ===
     .preference__text {
-        font-size: 20px;
+        font-size: $fs-s;
         line-height: 27px;
     }
+
     // === PORFOLIO ===
     .portfolio {
         &-content {
@@ -264,6 +329,7 @@
     .section-outer--small {
         margin-bottom: 50px;
     }
+
     // === INTRO ===
     .intro {
         &::before {
@@ -284,17 +350,58 @@
             margin-top: 40px;
         }
     }
+
     // === PREFERENCE ===
     .preference__text {
-        font-size: 18px;
+        font-size: $fs-xs;
         line-height: 26px;
     }
+
     // === GIFT ===
     .gift {
         &__title {
             font-size: 40px;
             line-height: 40px;
         }
+    }
+
+    // === REVIEWS ===
+    .reviews {
+        &-item {
+            min-width: 460px;
+            height: 570px;
+            padding: 20px 20px 30px;
+            font-size: 16px;
+            line-height: 24px;
+
+            img {
+                width: 350px;
+                height: 250px;
+            }
+        }
+
+        .title {
+            margin-bottom: 25px;
+        }
+
+        &-slider {
+            width: 480px;
+            height: 780px;
+
+            &__title {
+                font-size: $fs-s;
+                line-height: 28px;
+            }
+
+            &__author {
+                margin-top: 22px;
+            }
+        }
+    }
+
+    .slider-navigation {
+        width: 350px;
+        text-align: center;
     }
 }
 
@@ -310,7 +417,7 @@
     }
 
     .title {
-        font-size: 25px;
+        font-size: $fs-m;
         line-height: 25px;
 
         &::before,
@@ -325,6 +432,35 @@
         &::after {
             margin-right: -20vw;
         }
+    }
+
+    // === REVIEWS ===
+    .reviews {
+        &-item {
+            min-width: 330px;
+            height: 515px;
+            padding: 15px 15px 25px;
+            font-size: 14px;
+            line-height: 20px;
+
+            img {
+                width: 280px;
+                height: 190px;
+            }
+        }
+
+        &-slider {
+            width: 350px;
+            height: 700px;
+        }
+    }
+
+    .slider-navigation {
+        width: 290px;
+    }
+
+    .swiper-pagination-bullet + .swiper-pagination-bullet {
+        margin-left: 5px;
     }
 }
 
@@ -366,7 +502,7 @@
             margin-bottom: 25px;
 
             &__item {
-                font-size: 24px;
+                font-size: $fs-m;
                 line-height: 26px;
 
                 & + & {
@@ -375,6 +511,7 @@
             }
         }
     }
+
     // === INTRO ===
     .intro {
         &::before {
@@ -391,10 +528,12 @@
             line-height: 26px;
         }
     }
+
     // === PREFERENCE ===
     .preference__text {
         max-width: 350px;
     }
+
     // === PORFOLIO ===
     .portfolio__item img {
         width: 100%;
@@ -402,6 +541,7 @@
         height: 100%;
         max-height: 350px;
     }
+
     // === GIFT ===
     .gift {
         &-img img {
@@ -410,13 +550,13 @@
         }
 
         &__title {
-            font-size: 25px;
+            font-size: $fs-m;
             line-height: 25px;
         }
 
         &__text {
             margin-top: 15px;
-            font-size: 18px;
+            font-size: $fs-xs;
             line-height: 26px;
         }
 
@@ -433,9 +573,10 @@
     }
 
     .tabs-triggers__item {
-        font-size: 18px;
+        font-size: $fs-xs;
         line-height: 26px;
     }
+
     // === INTRO ===
     .intro {
         &__title {
@@ -455,14 +596,50 @@
             margin-top: 25px;
         }
     }
+
     // === PREFERENCE ===
     .preference__text {
         max-width: 290px;
-    }    // === PORFOLIO ===
+    }
+
+    // === PORFOLIO ===
     .portfolio__item img {
         width: 100%;
         max-width: 290px;
         height: 100%;
         max-height: 290px;
+    }
+
+    // === REVIEWS ===
+    .reviews {
+        &-item {
+            min-width: 290px;
+
+            img {
+                width: 250px;
+                height: 170px;
+            }
+        }
+
+        &-slider {
+            width: 300px;
+
+            &__title {
+                font-size: $fs-xs;
+                line-height: 24px;
+            }
+
+            &__text {
+                margin-top: 10px;
+            }
+
+            &-author {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .slider-navigation {
+        width: 270px;
     }
 }

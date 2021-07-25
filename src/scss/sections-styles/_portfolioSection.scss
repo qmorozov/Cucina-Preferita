@@ -92,6 +92,10 @@
             @include ArnoPro($weight: 400);
         }
 
+        &-subtitle {
+            font-weight: 300;
+        }
+
         @media (any-hover: hover) {
             &:hover {
                 #{$parent}-hover {
