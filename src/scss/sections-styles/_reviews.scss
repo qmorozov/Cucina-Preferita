@@ -22,10 +22,10 @@
         height: 534px;
         padding: 50px 50px 61px 50px;
         font-size: $fs-xs;
-        line-height: 26px;
+        line-height: $lh-s;
         background-color: $light-50;
         box-shadow: 0 0 20px rgba($dark-100, 0.15);
-        @include Circle($weight: 300);
+        @include Circle($weight: $fw-light);
     }
 
     &-slider {
@@ -38,7 +38,7 @@
             font-size: $fs-l;
             line-height: 35px;
             letter-spacing: 0.01em;
-            @include ArnoPro($weight: 400);
+            @include ArnoPro($weight: $fw-regular);
         }
 
         &__text {

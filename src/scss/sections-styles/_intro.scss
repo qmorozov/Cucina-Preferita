@@ -28,7 +28,7 @@
         width: 100%;
         max-width: 630px;
         font-size: $fs-xxl;
-        line-height: 65px;
+        line-height: $lh-xxl;
         @include ArnoPro($weight: 300);
     }
 
@@ -37,7 +37,7 @@
         max-width: 495px;
         margin-top: 50px;
         font-size: $fs-m;
-        line-height: 32px;
+        line-height: $lh-l;
         @include Circle($weight: 300);
     }
 

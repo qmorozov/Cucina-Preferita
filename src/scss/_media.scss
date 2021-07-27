@@ -107,6 +107,11 @@
     .slider-navigation {
         width: 400px;
     }
+
+    // === ADVICE ===
+    .advice-claim {
+        max-width: 450px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -155,7 +160,28 @@
 
         &__text {
             font-size: $fs-s;
-            line-height: 25px;
+            line-height: $lh-s;
+        }
+    }
+
+    // === ADVICE ===
+    .advice {
+        &-inner {
+            height: fit-content;
+        }
+
+        &-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            max-width: 510px;
+            margin: 0 auto;
+        }
+
+        &-info {
+            margin-top: 40px;
         }
     }
 }
@@ -258,7 +284,7 @@
 
         &__title {
             font-size: $fs-xl;
-            line-height: 55px;
+            line-height: $lh-xl;
         }
 
         &__text {
@@ -354,7 +380,7 @@
     // === PREFERENCE ===
     .preference__text {
         font-size: $fs-xs;
-        line-height: 26px;
+        line-height: $lh-m;
     }
 
     // === GIFT ===
@@ -372,7 +398,7 @@
             height: 570px;
             padding: 20px 20px 30px;
             font-size: 16px;
-            line-height: 24px;
+            line-height: $lh-xs;
 
             img {
                 width: 350px;
@@ -403,6 +429,38 @@
         width: 350px;
         text-align: center;
     }
+
+    // === ADVICE ===
+    .advice {
+        &-inner {
+            padding: 40px 0;
+        }
+
+        &__title {
+            max-width: 450px;
+            font-size: 40px;
+            line-height: 44px;
+        }
+
+        &-form {
+            margin-top: 25px;
+        }
+
+        &-info {
+            &__items {
+                max-width: fit-content;
+                margin: 43px auto 0;
+
+                &::before {
+                    height: 70%;
+                }
+            }
+
+            &__item {
+                max-width: 350px;
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -418,7 +476,7 @@
 
     .title {
         font-size: $fs-m;
-        line-height: 25px;
+        line-height: $lh-s;
 
         &::before,
         &::after {
@@ -462,6 +520,70 @@
     .swiper-pagination-bullet + .swiper-pagination-bullet {
         margin-left: 5px;
     }
+
+    // === ADVICE ===
+    .advice {
+        &__title {
+            font-size: 25px;
+            line-height: 25px;
+        }
+
+        &-content {
+            margin-top: 15px;
+        }
+
+        &-claim {
+            &__title {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        &-info {
+            &__items::before {
+                top: 8%;
+                height: 73%;
+            }
+
+            &__item {
+                max-width: 254px;
+            }
+
+            &__text {
+                margin-left: 15px;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        &-form {
+            &__label {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            &__input {
+                padding: 14px 20px 14px;
+                font-size: 14px;
+                line-height: 22px;
+                @include Circle($weight: $fw-light);
+            }
+
+            &__label-checkbox {
+                max-width: 150px;
+            }
+        }
+
+        &-btn {
+            margin-top: 25px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    .advice-form__item + .advice-form__item {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -503,7 +625,7 @@
 
             &__item {
                 font-size: $fs-m;
-                line-height: 26px;
+                line-height: $lh-m;
 
                 & + & {
                     margin-left: 35px;
@@ -525,7 +647,7 @@
 
         &__text {
             font-size: $fs-s;
-            line-height: 26px;
+            line-height: $lh-m;
         }
     }
 
@@ -551,13 +673,13 @@
 
         &__title {
             font-size: $fs-m;
-            line-height: 25px;
+            line-height: $lh-s;
         }
 
         &__text {
             margin-top: 15px;
             font-size: $fs-xs;
-            line-height: 26px;
+            line-height: $lh-m;
         }
 
         &__btn {
@@ -574,7 +696,7 @@
 
     .tabs-triggers__item {
         font-size: $fs-xs;
-        line-height: 26px;
+        line-height: $lh-m;
     }
 
     // === INTRO ===
@@ -589,7 +711,7 @@
             max-width: 290px;
             margin-top: 15px;
             font-size: $fs-xs;
-            line-height: 26px;
+            line-height: $lh-m;
         }
 
         &__btn {
@@ -626,7 +748,7 @@
 
             &__title {
                 font-size: $fs-xs;
-                line-height: 24px;
+                line-height: $lh-xs;
             }
 
             &__text {
@@ -641,5 +763,31 @@
 
     .slider-navigation {
         width: 270px;
+    }
+
+    // === ADVICE ===
+    .advice {
+        &-btn {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &-info {
+            margin-top: 30px;
+
+            &__items {
+                margin: 40px 0 0 auto;
+
+                &::before {
+                    height: 71%;
+                }
+            }
+
+            &__img {
+                width: 30px;
+                height: 30px;
+            }
+        }
     }
 }

@@ -42,7 +42,7 @@
     &__text {
         margin-top: 35px;
         font-size: $fs-m;
-        line-height: 32px;
+        line-height: $lh-l;
         color: $light-50;
         @include Circle($weight: 300);
     }

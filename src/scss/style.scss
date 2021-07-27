@@ -20,9 +20,9 @@
     }
 
     &-link {
-        font-size: 20px;
-        line-height: 25px;
-        @include ArnoPro($weight: 300);
+        font-size: $fs-s;
+        line-height: $lh-s;
+        @include ArnoPro($weight: $fw-light);
 
         @media (any-hover: hover) {
             transition: $transition;
@@ -96,9 +96,9 @@
 
     &__text {
         padding-left: 25px;
-        font-size: 24px;
-        line-height: 25px;
-        @include ArnoPro($weight: 400);
+        font-size: $fs-m;
+        line-height: $lh-s;
+        @include ArnoPro($weight: $fw-regular);
     }
 
     @media (any-hover: hover) {
@@ -138,10 +138,10 @@
         &__text {
             padding-left: 30px;
             font-size: 22px;
-            line-height: 25px;
+            line-height: $lh-s;
             color: $light-100;
             transition: $transition;
-            @include ArnoPro($weight: 400);
+            @include ArnoPro($weight: $fw-regular);
         }
 
         @media (any-hover: hover) {
@@ -183,5 +183,9 @@
 // === REVIEWS ===
 
 @import "sections-styles/reviews";
+
+// === ADVICE ===
+
+@import 'sections-styles/advice';
 
 @import "media";

@@ -77,19 +77,19 @@
             height: 100%;
             padding: 25px 5px;
             font-size: $fs-s;
-            line-height: 26px;
+            line-height: $lh-m;
             color: $light-50;
             background: linear-gradient(0deg, rgba($dark-100, 0.65), rgba($dark-100, 0.65));
             opacity: 0;
             transition: $transition;
-            @include Circle($weight: 300);
+            @include Circle($weight: $fw-light);
         }
 
         &-title {
             font-size: $fs-l;
             line-height: 35px;
             letter-spacing: 0.01em;
-            @include ArnoPro($weight: 400);
+            @include ArnoPro($weight: $fw-regular);
         }
 
         &-subtitle {

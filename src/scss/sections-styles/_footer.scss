@@ -49,9 +49,9 @@
 
         &__link {
             font-size: $fs-s;
-            line-height: 25px;
+            line-height: $lh-s;
             transition: $transition;
-            @include ArnoPro($weight: 400);
+            @include ArnoPro($weight: $fw-regular);
 
             @media (any-hover: hover) {
                 &:hover {
@@ -64,9 +64,9 @@
     &-copyright-info {
         width: 254px;
         font-size: $fs-xs;
-        line-height: 26px;
+        line-height: $lh-m;
         color: rgba($light-50, 0.5);
-        @include Circle($weight: 300);
+        @include Circle($weight: $fw-light);
     }
 
     &-copyright {
@@ -92,9 +92,9 @@
         width: 290px;
         margin-top: 30px;
         font-size: $fs-xs;
-        line-height: 26px;
+        line-height: $lh-m;
         color: rgba($light-50, 0.5);
-        @include Circle($weight: 300);
+        @include Circle($weight: $fw-light);
     }
 }
 

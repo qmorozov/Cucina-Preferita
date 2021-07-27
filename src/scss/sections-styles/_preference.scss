@@ -10,10 +10,10 @@
         max-width: 980px;
         margin: 0 auto;
         font-size: 24px;
-        font-weight: 300;
-        line-height: 32px;
+        font-weight: $fw-light;
+        line-height: $lh-l;
         text-align: center;
-        @include Circle($weight: 300);
+        @include Circle($weight: $fw-light);
     }
 
     &-items {
@@ -37,8 +37,8 @@
 
         &__text {
             font-size: 20px;
-            line-height: 30px;
-            @include Circle($weight: 400);
+            line-height: $lh-l;
+            @include Circle($weight: $fw-regular);
         }
     }
 }

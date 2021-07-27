@@ -1,0 +1,110 @@
+
+<!-- ADVICE -->
+<section class="advice section-outer" style="background-image: url(images/content/advice-bg.jpg);">
+    <div class="container">
+        <div class="advice-inner">
+
+            <h2 class="advice__title">
+                Консультация дизайнера в офисе или по телефону
+            </h2>
+
+            <div class="advice-content">
+
+                <div class="advice-claim">
+                    <h3 class="advice-claim__title">
+                        Оставьте заявку и вместе мы сумеем воплотить в реальности ваши задумки и мечты!
+                    </h3>
+
+                    <form class="advice-claim__form advice-form">
+
+                        <div class="advice-form__item">
+                            <label for="name" class="advice-form__label">
+                                Ваше имя
+                            </label>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                id="name" 
+                                class="advice-form__input" 
+                                pattern="[a-zA-Zа-яА-ЯёЁ ]+" 
+                                placeholder="Имя" 
+                                required 
+                            >
+                        </div>
+                        
+                        <div class="advice-form__item">
+                            <label for="phone" class="advice-form__label">
+                                Контактный телефон
+                            </label>
+                            <input 
+                            type="tel" 
+                            name="phone" 
+                            id="phone" 
+                            class="advice-form__input" 
+                            pattern="^\+380\d{9}$" 
+                            placeholder="Телефон" 
+                            required 
+                        >
+                        </div>
+
+                        <label for="confidentiality" class="advice-form__item advice-form__item-checkbox">
+                            <input
+                                type="checkbox"
+                                id="confidentiality"
+                                class="advice-form__checkbox"
+                                required
+                            >
+                            <span class="advice-form__checkbox-fake"></span>
+                            <span class="advice-form__label advice-form__label-checkbox">
+                                Я согласен с политикой конфиденциальности
+                            </span>
+                        </label>
+
+                        <button class="advice-btn btn btn-bg" type="submit">
+                            <span class="bt-text">
+                                Получить консультацию дизайнера
+                            </span>
+                        </button>
+                    
+                    </form>
+                </div>
+
+                <div class="advice-info">
+                    
+                    <h3 class="advice-info__title">
+                        А что будет дальше после консультации?
+                    </h3>
+
+                    <ul class="advice-info__items">
+
+                        <li class="advice-info__item">
+                            <img class="advice-info__img" src="images/icons/advice-info-1.svg" alt="advice-info">
+                            <p class="advice-info__text">
+                                Спланируем этапы ремонтных работ и их стоимость
+                            </p>
+                        </li>
+
+                        <li class="advice-info__item">
+                            <img class="advice-info__img" src="images/icons/advice-info-2.svg" alt="advice-info">
+                            <p class="advice-info__text">
+                                Разработаем для вас бесплатный пробный эскиз и смету к нему
+                            </p>
+                        </li>
+
+                        <li class="advice-info__item">
+                            <img class="advice-info__img" src="images/icons/advice-info-3.svg" alt="advice-info">
+                            <p class="advice-info__text">
+                                Проведем замер помещения специалистом технологом-монтажником и доработаем эскиз с учетом проведенного замера
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- / ADVICE -->

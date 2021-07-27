@@ -10,6 +10,11 @@
     margin: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -49,7 +54,7 @@ h6 {
 
 body {
     font-size: $fs-m;
-    line-height: 32px;
+    line-height: $lh-l;
     color: $dark-50;
     @include Roboto($weight: $fw-regular);
 }
@@ -82,10 +87,10 @@ body {
     justify-content: center;
     margin-bottom: 40px;
     font-size: $fs-xl;
-    line-height: 55px;
+    line-height: $lh-xl;
     text-align: center;
     letter-spacing: 0.01em;
-    @include ArnoPro($weight: 300);
+    @include ArnoPro($weight: $fw-light);
 
     &::before,
     &::after {
@@ -117,8 +122,8 @@ body {
     @include resetBtn;
 
     .btn-text {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: $fs-s;
+        line-height: $lh-xs;
         text-align: center;
         @include Circle($weight: $fw-regular);
     }
@@ -238,7 +243,7 @@ body {
         &__item {
             position: relative;
             font-size: $fs-l;
-            line-height: 32px;
+            line-height: $lh-l;
             color: $dark-100;
             transition: $transition;
             @include Circle ($weight: $fw-light);
@@ -296,7 +301,7 @@ body {
     &-item {
         position: relative;
         font-size: $fs-l;
-        line-height: 32px;
+        line-height: $lh-l;
         color: $dark-100;
         cursor: pointer;
         transition: $transition;
