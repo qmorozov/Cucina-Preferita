@@ -3,7 +3,6 @@
 // === MIXIN ===
 
 @mixin resetBtn {
-    // padding: 0;
     cursor: pointer;
     background: none;
     border: none;
@@ -11,10 +10,10 @@
 
 @mixin title {
     font-size: $fs-xl;
-    line-height: 55px;
+    line-height: $lh-xl;
     color: $light-50;
-    letter-spacing: 0.01em;
-    @include ArnoPro($weight: 300);
+    letter-spacing: $lt-sp;
+    @include ArnoPro($weight: $fw-light);
 }
 
 @mixin input {
@@ -64,6 +63,7 @@
 
 // === FONT-SIZE ===
 
+$fs-xxs: 14px;
 $fs-xs: 18px;
 $fs-s: 20px;
 $fs-m: 24px;
@@ -86,6 +86,10 @@ $lh-l: 32px;
 $lh-xl: 55px;
 $lh-xxl: 65px;
 
+// === LETTER SPACING ===
+
+$lt-sp: 0.01em;
+
 // === COLOR ===
 
 $primary: #ca6d38;
@@ -100,4 +104,5 @@ $light-200:#dfd7d3;
 $light-300: #dbdbdb;
 
 // === ANIMATION ===
-$transition: all .3s ease-in-out;
+
+$transition: all .4s ease-in-out;

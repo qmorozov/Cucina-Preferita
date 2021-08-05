@@ -1,6 +1,8 @@
 // === HEADER ===
 
 .header {
+    $header: &;
+
     position: fixed;
     top: 0;
     right: 0;
@@ -9,7 +11,7 @@
     background-color: $light-50;
 
     &--active {
-        .header-navigation {
+        #{$header}-navigation {
             flex-direction: column;
             align-items: center;
             height: 100vh;
@@ -29,10 +31,9 @@
             }
         }
 
-        .header-contact {
+        #{$header}-contact {
             display: block;
             margin-left: 0;
-            font-size: $fs-m;
             line-height: $lh-s;
         }
 

@@ -1,4 +1,3 @@
-@import "mixin";
 @import "fonts";
 @import "vars";
 
@@ -41,6 +40,21 @@
 
         &-navigation {
             left: 30px;
+        }
+    }
+
+    // === SHOWROOM ===
+    .showroom {
+        &-item {
+            img {
+                width: 250px;
+                height: 170px;
+            }
+
+            &--active img {
+                width: 430px;
+                height: 280px;
+            }
         }
     }
 }
@@ -92,7 +106,6 @@
         }
 
         &-item {
-            // display: block;
             min-width: 500px;
             height: 650px;
         }
@@ -184,6 +197,9 @@
             margin-top: 40px;
         }
     }
+
+    // === SHOWROOM ===
+    // .showroom {}
 }
 
 @media (max-width: 900px) {
@@ -215,6 +231,18 @@
             &__img {
                 margin-bottom: 15px;
             }
+        }
+    }
+
+    // === SHOWROOM ===
+    .showroom {
+        &__text {
+            font-size: $fs-s;
+            line-height: $lh-m;
+        }
+
+        &-container {
+            height: 360px;
         }
     }
 }
@@ -461,6 +489,23 @@
             }
         }
     }
+
+    // === SHOWROOM ===
+    .showroom {
+        &__text {
+            font-size: $fs-xs;
+            line-height: $lh-m;
+        }
+
+        &-container {
+            height: 360px;
+        }
+
+        &-item--active img {
+            width: 290px;
+            height: 290px;
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -470,7 +515,7 @@
 
         &-no-bg .btn-text::before {
             width: 35px;
-            background: url('../images/icons/arrow-right-small.svg');
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='10' viewBox='0 0 36 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.2071 0L35.9142 4.70711L31.2071 9.41421L29.7929 8L32.0858 5.70711H0.5V3.70711H32.0858L29.7929 1.41421L31.2071 0Z' fill='%23DFD7D3'/%3e%3c/svg%3e ");
         }
     }
 
@@ -517,6 +562,11 @@
         width: 290px;
     }
 
+    .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+    }
+
     .swiper-pagination-bullet + .swiper-pagination-bullet {
         margin-left: 5px;
     }
@@ -524,8 +574,8 @@
     // === ADVICE ===
     .advice {
         &__title {
-            font-size: 25px;
-            line-height: 25px;
+            font-size: $fs-m;
+            line-height: $lh-s;
         }
 
         &-content {
@@ -535,7 +585,7 @@
         &-claim {
             &__title {
                 font-size: 18px;
-                line-height: 26px;
+                line-height: $lh-m;
             }
         }
 
@@ -551,21 +601,21 @@
 
             &__text {
                 margin-left: 15px;
-                font-size: 14px;
-                line-height: 22px;
+                font-size: $fs-xxs;
+                line-height: $lh-xs;
             }
         }
 
         &-form {
             &__label {
-                font-size: 14px;
-                line-height: 22px;
+                font-size: $fs-xxs;
+                line-height: $lh-xs;
             }
 
             &__input {
                 padding: 14px 20px 14px;
-                font-size: 14px;
-                line-height: 22px;
+                font-size: $fs-xxs;
+                line-height: $lh-xs;
                 @include Circle($weight: $fw-light);
             }
 
@@ -576,8 +626,8 @@
 
         &-btn {
             margin-top: 25px;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: $fs-xs;
+            line-height: $lh-xs;
         }
     }
 
@@ -591,7 +641,7 @@
     .btn {
         & .btn-text {
             display: block;
-            font-size: 14px;
+            font-size: $fs-xxs;
             line-height: 20px;
         }
 

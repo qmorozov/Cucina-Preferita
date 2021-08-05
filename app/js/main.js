@@ -125,19 +125,24 @@ tabCLick(tabs);
 const mySwiper = new Swiper('.reviews-slider', {
     slideClass: 'reviews-item',
     wrapperClass: 'reviews-items',
+
     slidesPerView: 'auto',
     centeredSlides: true,
     simulateTouch: false,
     spaceBetween: 160,
+
     pagination: {
         el: '.slider-pagination',
         clickable: true,
     },
+
     navigation: {
         nextEl: '.slider-button-next',
         prevEl: '.slider-button-prev',
     },
-    speed: 1000,
+
+    speed: 1500,
+
     breakpoints: {
         1000: {
             simulateTouch: true
@@ -145,6 +150,38 @@ const mySwiper = new Swiper('.reviews-slider', {
     }
 });
 
+
+const swiperSlider = new Swiper(".showroom-container", {
+    slideActiveClass: 'showroom-item--active',
+
+    initialSlide: 1,
+    centeredSlides: true,
+    spaceBetween: 58,
+    slideToClickedSlide: true,
+
+    pagination: {
+        el: '.slider-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+    },
+
+    // speed: 1500,
+
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          speed: 1100,
+        },
+        1000: {
+            slidesPerView: 3,
+            speed: 1500,
+        },
+    }
+})
 
 
 

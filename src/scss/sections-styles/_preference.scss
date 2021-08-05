@@ -9,9 +9,7 @@
         width: 100%;
         max-width: 980px;
         margin: 0 auto;
-        font-size: 24px;
         font-weight: $fw-light;
-        line-height: $lh-l;
         text-align: center;
         @include Circle($weight: $fw-light);
     }
@@ -31,13 +29,11 @@
             img {
                 width: 80px;
                 height: 80px;
-                object-fit: cover;
             }
         }
 
         &__text {
-            font-size: 20px;
-            line-height: $lh-l;
+            font-size: $fs-s;
             @include Circle($weight: $fw-regular);
         }
     }

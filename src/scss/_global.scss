@@ -1,6 +1,7 @@
 @import "fonts";
 @import "vars";
-@import "mixin";
+
+// === RESET ===
 
 *,
 *::after,
@@ -42,6 +43,17 @@ a {
     text-decoration: none;
 }
 
+img {
+    object-fit: cover;
+}
+
+a,
+button,
+input,
+textarea {
+    outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -51,6 +63,8 @@ h6 {
     padding: 0;
     margin: 0;
 }
+
+// === GLOBAL STYLE ===
 
 body {
     font-size: $fs-m;
@@ -130,7 +144,6 @@ body {
 
     &-no-bg {
         position: relative;
-        // width: 400px;
         min-width: 231px;
         color: $light-50;
         border: 2px solid $light-300;
@@ -148,7 +161,7 @@ body {
                 width: 66px;
                 height: 10px;
                 content: "";
-                background: url('../images/icons/arrow-right.svg') no-repeat;
+                background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='66' height='10' viewBox='0 0 66 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M61.2071 0.292847L65.9142 4.99995L61.2071 9.70706L59.7929 8.29285L62.0858 5.99995H0V3.99995H62.0858L59.7929 1.70706L61.2071 0.292847Z' fill='%23DFD7D3'/%3e%3c/svg%3e ") no-repeat;
                 transition: $transition;
                 transform: translateY(-50%);
             }
@@ -201,7 +214,6 @@ body {
     }
 
     &-bg {
-        // width: 400px;
         color: $dark-50;
         background-color: $light-200;
         transition: $transition;
@@ -216,7 +228,6 @@ body {
     }
 
     &-standart {
-        // width: 275px;
         border: 2px solid $light-200;
         transition: $transition;
 
@@ -230,6 +241,220 @@ body {
 
         &:active {
             opacity: 0.8;
+        }
+    }
+}
+
+.logo__img {
+    width: 230px;
+    height: 41px;
+    object-fit: contain;
+}
+
+.menu__list {
+    display: flex;
+
+    &-item {
+        & + & {
+            margin-left: 34px;
+        }
+    }
+
+    &-link {
+        font-size: $fs-s;
+        line-height: $lh-s;
+        @include ArnoPro($weight: $fw-light);
+
+        @media (any-hover: hover) {
+            transition: $transition;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.burger-btn {
+    position: relative;
+    display: none;
+    width: 31px;
+    height: 12px;
+    margin-left: auto;
+    cursor: pointer;
+    @include resetBtn;
+
+    &__line {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: $primary;
+        transition: $transition;
+        transform: translateY(-50%);
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        right: 0;
+        height: 2px;
+        content: "";
+        background-color: $primary;
+        transition: $transition;
+    }
+
+    &::before {
+        top: 0;
+        width: 100%;
+    }
+
+    &::after {
+        bottom: 0;
+        width: 70%;
+    }
+
+    @media (any-hover: hover) {
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.contact-phone {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        position: absolute;
+        top: -2px;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__text {
+        padding-left: 25px;
+        line-height: $lh-s;
+        @include ArnoPro($weight: $fw-regular);
+    }
+
+    @media (any-hover: hover) {
+        transition: $transition;
+
+        &:hover svg {
+            fill: $primary;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.social {
+    &-item {
+        position: relative;
+        display: flex;
+
+        &__img {
+            position: absolute;
+            top: -30%;
+            left: 0;
+
+            svg {
+                width: 15px;
+                height: 15px;
+
+                path {
+                    fill: $light-50;
+                    transition: $transition;
+                }
+            }
+        }
+
+        &__text {
+            padding-left: 30px;
+            font-size: 22px;
+            line-height: $lh-s;
+            color: $light-100;
+            transition: $transition;
+            @include ArnoPro($weight: $fw-regular);
+        }
+
+        @media (any-hover: hover) {
+            &__text:hover {
+                color: $primary;
+            }
+
+            &:hover path {
+                fill: $primary;
+            }
+        }
+    }
+}
+
+.slider-navigation {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 556px;
+}
+
+.slider-button {
+    display: inline;
+    cursor: pointer;
+    transition: $transition;
+
+    svg {
+        width: 91px;
+        height: 11px;
+        fill: $primary;
+    }
+
+    path {
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover path {
+        box-shadow: 0 1px 4px rgba($dark-100, 0.25);
+    }
+
+    &:active path {
+        box-shadow: 0 1px 4px rgba($dark-100, 0.25);
+        fill: rgba($primary, 0.8);
+    }
+
+    &-prev svg {
+        transform: rotate(-180deg);
+    }
+}
+
+.swiper-button-disabled {
+    cursor: auto;
+    opacity: 0.3;
+}
+
+.swiper-pagination {
+    &-bullet {
+        width: 10px;
+        height: 10px;
+        background: none;
+        border: 1px solid $light-200;
+        opacity: 1;
+        transition: all .85s ease-in-out;
+
+        & + & {
+            margin-left: 10px;
+        }
+
+        &-active {
+            background: $primary;
+            box-shadow: 0 1px 4px rgba($dark-100, 0.25);
         }
     }
 }
@@ -333,4 +558,9 @@ body {
             }
         }
     }
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+    cursor: pointer;
 }

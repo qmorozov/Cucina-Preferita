@@ -27,7 +27,6 @@
         img {
             width: 600px;
             height: 500px;
-            object-fit: cover;
         }
     }
 
@@ -41,10 +40,8 @@
 
     &__text {
         margin-top: 35px;
-        font-size: $fs-m;
-        line-height: $lh-l;
         color: $light-50;
-        @include Circle($weight: 300);
+        @include Circle($weight: $fw-light);
     }
 
     &__btn {

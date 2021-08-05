@@ -34,8 +34,6 @@
         max-width: 580px;
 
         &__title {
-            font-size: $fs-m;
-            line-height: $lh-l;
             @include Circle($weight: $fw-light);
         }
     }
@@ -59,6 +57,7 @@
         &-checkbox {
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
     }
 
@@ -71,7 +70,6 @@
         display: block;
         font-size: $fs-xs;
         line-height: $lh-m;
-        cursor: pointer;
         @include Circle($weight: $fw-light);
 
         &-checkbox {
@@ -112,8 +110,6 @@
 
 .advice-info {
     &__title {
-        font-size: $fs-m;
-        line-height: $lh-l;
         @include Circle($weight: $fw-light);
     }
 

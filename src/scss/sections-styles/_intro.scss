@@ -29,16 +29,14 @@
         max-width: 630px;
         font-size: $fs-xxl;
         line-height: $lh-xxl;
-        @include ArnoPro($weight: 300);
+        @include ArnoPro($weight: $fw-light);
     }
 
     &__text {
         width: 100%;
         max-width: 495px;
         margin-top: 50px;
-        font-size: $fs-m;
-        line-height: $lh-l;
-        @include Circle($weight: 300);
+        @include Circle($weight:$fw-light);
     }
 
     &__btn {
