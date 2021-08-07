@@ -57,6 +57,12 @@
             }
         }
     }
+
+    // === START - PAGE ===
+    .start__item img {
+        width: 340px;
+        height: 280px;
+    }
 }
 
 @media (max-width: 1105px) {
@@ -124,6 +130,12 @@
     // === ADVICE ===
     .advice-claim {
         max-width: 450px;
+    }
+
+    // === START - PAGE ===
+    .start__item img {
+        width: 290px;
+        height: 230px;
     }
 }
 
@@ -202,11 +214,29 @@
     // .showroom {}
 }
 
+@media (min-width: 900px) {
+    .slider-pagination {
+        display: none;
+    }
+}
+
 @media (max-width: 900px) {
     // === GLOBAL +==
     .title {
         font-size: $fs-l;
         line-height: 30px;
+    }
+
+    // === START - PAGE ===
+    .start {
+        &__item {
+            text-align: center;
+
+            img {
+                width: 390px;
+                height: 330px;
+            }
+        }
     }
 }
 
@@ -375,6 +405,13 @@
             }
         }
     }
+
+    // === START - PAGE ===
+    .start {
+        &-slider {
+            margin-top: 60px;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -506,6 +543,17 @@
             height: 290px;
         }
     }
+
+    // === START - PAGE ===
+    .start {
+        &--showroom {
+            height: 560px;
+
+            .start-content {
+                margin-top: 40px;
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -633,6 +681,31 @@
 
     .advice-form__item + .advice-form__item {
         margin-top: 20px;
+    }
+
+    // === START - PAGE ===
+    .start {
+        &--showroom {
+            height: 490px;
+        }
+
+        &__title {
+            font-size: $fs-l;
+            line-height: $lh-l;
+        }
+
+        &__text {
+            margin-top: 25px;
+            font-size: $fs-xs;
+            line-height: $lh-m;
+        }
+
+        &__item {
+            img {
+                width: 290px;
+                height: 230px;
+            }
+        }
     }
 }
 

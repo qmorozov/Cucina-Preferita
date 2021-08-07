@@ -83,7 +83,7 @@ const scriptLibs = () => {
 }
 
 const htmlInclude = () => {
-    return src(['./src/index.html'])
+    return src(['./src/*.html'])
         .pipe(fileinclude({
             prefix: '@',
             basepath: '@file'
@@ -129,7 +129,7 @@ const watchFiles = () => {
     });
 
     watch('./src/scss/**/*.scss', styles);
-    watch('./src/index.html', htmlInclude);
+    watch('./src/*.html', htmlInclude);
     watch('./src/images/**/*.*', imgToApp);
     watch('./src/images/**/*.jpg', imgToApp);
     watch('./src/images/**/*.png', imgToApp);

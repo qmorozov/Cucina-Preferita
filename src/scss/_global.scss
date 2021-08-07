@@ -564,3 +564,46 @@ body {
 .swiper-slide-prev {
     cursor: pointer;
 }
+
+.breadcrumbs {
+    &__list {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+            margin-right: 20px;
+            font-size: 16px;
+            line-height: $lh-xs;
+            color: $light-200;
+            transition: $transition;
+            @include Circle($weight: $fw-light);
+
+            &:hover a {
+                color: $primary;
+
+                &::after {
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.8295 2.34569L32.2464 0.691389L32.9688 0L35.6921 2.84569L32.9688 5.69139L32.2464 5L33.8295 3.34569H0V2.34569H33.8295Z' fill='%23ca6d38'/%3e%3c/svg%3e ");
+                }
+            }
+        }
+
+        &-item a {
+            position: relative;
+            padding-right: 56px;
+            transition: $transition;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                bottom: 50%;
+                width: 36px;
+                height: 6px;
+                content: "";
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.8295 2.34569L32.2464 0.691389L32.9688 0L35.6921 2.84569L32.9688 5.69139L32.2464 5L33.8295 3.34569H0V2.34569H33.8295Z' fill='%23DFD7D3'/%3e%3c/svg%3e ");
+                transition: $transition;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

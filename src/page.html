@@ -1,26 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
+    
     @include('components/_head.html')
 
-<body>
+    <body>
+        <div class="wrapper">
+        
+            <!-- HEADER -->
+            @include('components/_header.html')
+            <!-- / HEADER -->
+        
+            <main>
+        
+                <!-- START - PAGE -->
+                <section class="start start--showroom" style="background-image: url(images/content/start-bg.jpg);">
+                    <div class="container">
+                        <div class="start-inner">
 
-    <div class="wrapper">
+                            <div class="breadcrumbs start-breadcrumbs">
+                                <ul class="breadcrumbs__list">
+                                    <li class="breadcrumbs__list-item">
+                                        <a href="#" aria-label="breadcrumbs">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumbs__list-item">
+                                        <span>
+                                            Шоу-рум
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
 
-        <!-- HEADER -->
-        @include('components/_header.html')
-        <!-- / HEADER -->
+                            <div class="start-content">
+                                <h2 class="start__title">
+                                    Шоу-рум
+                                </h2>
+                                <p class="start__text">
+                                    В нашем шоу-руме представлен большой ассортимент образцов фасадов, фурнитуры, столешниц, а также готовые кухни в современном и классическом стиле, наглядно демонстрирующие все удобства современной мебели.
+                                </p>
+                            </div>
 
-        <main>
 
-        </main>
+                            <div class="start-slider" data-mobile="false">
+                                <div class="start-items swiper-wrapper">
+                                    
+                                    <div class="start__item swiper-slide">
+                                        <img src="images/content/start-img-1.jpg" alt="start-img-1">
+                                    </div>
+                                    
+                                    <div class="start__item swiper-slide">
+                                        <img src="images/content/start-img-2.jpg" alt="start-img-1">
+                                    </div>
+                                    
+                                    <div class="start__item swiper-slide">
+                                        <img src="images/content/start-img-3.jpg" alt="start-img-1">
+                                    </div>
+                                    
+                                </div>
 
-        <!-- FOOTER -->
-        @include('components/_footer.html')
-        <!-- / FOOTER -->
+                                <div class="slider-navigation">
+                                    <div class="slider-pagination"></div>
+                                </div>
 
-    </div>
+                            </div>
 
-    <script src="js/libs.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- / START - PAGE -->
+
+                
+
+            </main>
+
+            <!-- FOOTER -->
+            @include('components/_footer.html')
+            <!-- / FOOTER -->
+            
+        </div>
+        
+        @include('components/_scripts.html')
+
+    </body>
 </html>

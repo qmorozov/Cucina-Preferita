@@ -181,8 +181,40 @@ const swiperSlider = new Swiper(".showroom-container", {
             speed: 1500,
         },
     }
-})
+});
 
+const startSlider = document.querySelector('.start-slider');
+
+let swiperStart;
+
+function mobileSwiper() {
+    if (window.innerWidth <= 900 && startSlider.dataset.mobile == 'false') {
+        swiperStart = new Swiper(startSlider, {        
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 50,
+            pagination: {
+                el: '.slider-pagination',
+                clickable: true,
+            },
+            speed: 1000,
+        });
+        startSlider.dataset.mobile = 'true';
+    };
+    if (window.innerWidth > 900) {
+        startSlider.dataset.mobile = 'false';
+
+        if (startSlider.classList.contains('swiper-container-initialized')) {
+            swiperStart.destroy();
+        }
+    };
+}
+
+mobileSwiper();
+
+window.addEventListener('resize', () => {
+    mobileSwiper();
+})
 
 
 
