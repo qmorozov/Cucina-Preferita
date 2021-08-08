@@ -169,8 +169,6 @@ const swiperSlider = new Swiper(".showroom-container", {
         prevEl: '.slider-button-prev',
     },
 
-    // speed: 1500,
-
     breakpoints: {
         320: {
             slidesPerView: 1,

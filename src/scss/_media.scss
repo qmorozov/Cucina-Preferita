@@ -787,6 +787,21 @@
             }
         }
     }
+
+    // === PROJECT ===
+    .project {
+        &__text {
+            font-size: $fs-xxs;
+            line-height: $lh-xs;
+        }
+
+        &__quote {
+            padding: 15px 0;
+            margin: 20px 0;
+            font-size: $fs-xs;
+            line-height: $lh-m;
+        }
+    }
 }
 
 @media (max-width: 450px) {
