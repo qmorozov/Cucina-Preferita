@@ -183,7 +183,7 @@ const swiperSlider = new Swiper(".showroom-container", {
     }
 });
 
-const startSlider = document.querySelector('.start-slider');
+const startSlider = document.querySelector('.exhibition-slider');
 
 let swiperStart;
 
@@ -202,6 +202,7 @@ function mobileSwiper() {
         startSlider.dataset.mobile = 'true';
     };
     if (window.innerWidth > 900) {
+
         startSlider.dataset.mobile = 'false';
 
         if (startSlider.classList.contains('swiper-container-initialized')) {

@@ -59,7 +59,7 @@
     }
 
     // === START - PAGE ===
-    .start__item img {
+    .exhibition__item img {
         width: 340px;
         height: 280px;
     }
@@ -133,9 +133,15 @@
     }
 
     // === START - PAGE ===
-    .start__item img {
+    .exhibition__item img {
         width: 290px;
         height: 230px;
+    }
+
+    // === WORK ===
+    .work__item-photo img {
+        width: 300px;
+        height: 196px;
     }
 }
 
@@ -210,13 +216,18 @@
         }
     }
 
-    // === SHOWROOM ===
-    // .showroom {}
+    // === WORK ===
+    .work__item-photo img {
+        width: 250px;
+        height: 146px;
+    }
 }
 
 @media (min-width: 900px) {
-    .slider-pagination {
-        display: none;
+    .exhibition {
+        .slider-pagination {
+            display: none;
+        }
     }
 }
 
@@ -228,14 +239,12 @@
     }
 
     // === START - PAGE ===
-    .start {
-        &__item {
-            text-align: center;
+    .exhibition__item {
+        text-align: center;
 
-            img {
-                width: 390px;
-                height: 330px;
-            }
+        img {
+            width: 390px;
+            height: 330px;
         }
     }
 }
@@ -350,6 +359,28 @@
             line-height: 35px;
         }
     }
+
+    // === WORK ===
+    .work {
+        &-items {
+            flex-direction: column;
+        }
+
+        &__item {
+            &::after {
+                display: none;
+            }
+
+            &-photo img {
+                width: 290px;
+                height: 204px;
+            }
+
+            & + & {
+                margin-top: 50px;
+            }
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -407,10 +438,8 @@
     }
 
     // === START - PAGE ===
-    .start {
-        &-slider {
-            margin-top: 60px;
-        }
+    .exhibition-slider {
+        margin-top: -80px;
     }
 }
 
@@ -553,6 +582,11 @@
                 margin-top: 40px;
             }
         }
+    }
+
+    // === WORK ===
+    .work__btn {
+        margin-top: 20px;
     }
 }
 
@@ -699,12 +733,12 @@
             font-size: $fs-xs;
             line-height: $lh-m;
         }
+    }
 
-        &__item {
-            img {
-                width: 290px;
-                height: 230px;
-            }
+    .exhibition__item {
+        img {
+            width: 290px;
+            height: 230px;
         }
     }
 }
@@ -808,6 +842,12 @@
         &__btn {
             margin-top: 25px;
         }
+    }
+
+    // === WORK ===
+    .work__text {
+        font-size: $fs-xs;
+        line-height: $lh-m;
     }
 }
 

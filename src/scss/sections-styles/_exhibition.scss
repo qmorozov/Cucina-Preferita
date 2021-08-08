@@ -1,0 +1,28 @@
+.exhibition {
+    &-slider {
+        position: relative;
+        padding-bottom: 25px;
+        margin-top: -140px;
+
+        .swiper-slide {
+            width: auto;
+        }
+    }
+
+    &-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item img {
+        width: 390px;
+        height: 330px;
+        object-fit: cover;
+    }
+
+    .slider-navigation {
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+    }
+}

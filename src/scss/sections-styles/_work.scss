@@ -1,0 +1,79 @@
+.work {
+    &-top {
+        margin-bottom: 60px;
+    }
+
+    &__text {
+        max-width: 1020px;
+        margin: 0 auto;
+        font-size: $fs-xs;
+        line-height: $lh-m;
+        text-align: center;
+        @include Circle($weight: $fw-light);
+    }
+
+    &__btn {
+        margin: 60px auto 0;
+    }
+}
+
+.work-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work__item {
+    position: relative;
+    text-align: center;
+
+    &-icon {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+
+    &-title {
+        margin-top: 20px;
+        font-size: $fs-l;
+        line-height: 35px;
+        @include ArnoPro($weight: $fw-regular);
+    }
+
+    &-photo {
+        position: relative;
+        padding-top: 45px;
+        margin-top: 20px;
+
+        img {
+            width: 350px;
+            height: 246px;
+            object-fit: cover;
+            border: 2px solid $light-200;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            left: 50%;
+            width: 2px;
+            height: 45px;
+            content: "";
+            background-color: $light-200;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 67%;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background-color: $light-200;
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+}
