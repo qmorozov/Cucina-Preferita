@@ -145,6 +145,13 @@
     }
 }
 
+@media (max-width: 1060px) {
+    // === DESIGNER ===
+    .designer-items {
+        justify-content: normal;
+    }
+}
+
 @media (max-width: 1000px) {
     // === GLOBAL ===
     .burger-btn {
@@ -588,6 +595,18 @@
     .work__btn {
         margin-top: 20px;
     }
+
+    // === DESIGNER ===
+    .designer {
+        &::before {
+            top: 36.5%;
+        }
+
+        &__item img {
+            width: 300px;
+            height: 300px;
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -739,6 +758,33 @@
         img {
             width: 290px;
             height: 230px;
+        }
+    }
+
+    // === DESIGNER ===
+    .designer {
+        &::before {
+            top: 34.5%;
+            height: 40%;
+        }
+
+        &__item {
+            &-title {
+                margin-top: 25px;
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            &-text {
+                max-width: 228px;
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            img {
+                width: 228px;
+                height: 228px;
+            }
         }
     }
 }

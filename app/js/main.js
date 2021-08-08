@@ -173,8 +173,8 @@ const swiperSlider = new Swiper(".showroom-container", {
 
     breakpoints: {
         320: {
-          slidesPerView: 1,
-          speed: 1100,
+            slidesPerView: 1,
+            speed: 1100,
         },
         1000: {
             slidesPerView: 3,
@@ -183,39 +183,43 @@ const swiperSlider = new Swiper(".showroom-container", {
     }
 });
 
-const startSlider = document.querySelector('.exhibition-slider');
+function mobileSlider(container, width) {
+    const startSlider = document.querySelector(container);
 
-let swiperStart;
+    let swiperStart;
 
-function mobileSwiper() {
-    if (window.innerWidth <= 900 && startSlider.dataset.mobile == 'false') {
-        swiperStart = new Swiper(startSlider, {        
-            slidesPerView: 1,
-            centeredSlides: true,
-            spaceBetween: 50,
-            pagination: {
-                el: '.slider-pagination',
-                clickable: true,
-            },
-            speed: 1000,
-        });
-        startSlider.dataset.mobile = 'true';
-    };
-    if (window.innerWidth > 900) {
+    function mobileSwiper() {
+        if (window.innerWidth <= width && startSlider.dataset.mobile == 'false') {
+            swiperStart = new Swiper(startSlider, {
+                slidesPerView: 1,
+                centeredSlides: true,
+                spaceBetween: 50,
+                pagination: {
+                    el: '.slider-pagination',
+                    clickable: true,
+                },
+                speed: 1000,
+            });
+            startSlider.dataset.mobile = 'true';
+        };
+        if (window.innerWidth > width) {
+            startSlider.dataset.mobile = 'false';
+            if (startSlider.classList.contains('swiper-container-initialized')) {
+                swiperStart.destroy();
+            }
+        };
+    }
 
-        startSlider.dataset.mobile = 'false';
+    mobileSwiper();
 
-        if (startSlider.classList.contains('swiper-container-initialized')) {
-            swiperStart.destroy();
-        }
-    };
+    window.addEventListener('resize', () => {
+        mobileSwiper();
+    })
 }
 
-mobileSwiper();
+mobileSlider('.exhibition-slider', 900);
 
-window.addEventListener('resize', () => {
-    mobileSwiper();
-})
+mobileSlider('.designer-content', 1060);
 
 
 
