@@ -1,26 +1,591 @@
 <!DOCTYPE html>
 <html lang="ru">
     
+    <!-- HEAD -->
     @include('components/_head.html')
+    <!-- / HEAD -->
 
     <body>
-        <div class="wrapper">
         
+        <div class="wrapper">
+            
             <!-- HEADER -->
             @include('components/_header.html')
             <!-- / HEADER -->
-        
+
             <main>
+                
+                <!-- START -->
+                <section class="start start--showroom" style="background-image: url(images/content/start-bg-1.jpg);">
+                    <div class="container">
+                        <div class="start-inner">
+                            <div class="breadcrumbs start-breadcrumbs">
+                                <ul class="breadcrumbs__list">
+                                    <li class="breadcrumbs__list-item">
+                                        <a href="#" aria-label="breadcrumbs">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumbs__list-item">
+                                        <span>
+                                            Кухни на заказ
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="start-content">
+                                <h2 class="start__title">
+                                    Портфолио
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- / START -->
 
+                <!-- PORTFOLIO -->
+                <section class="portfolio portfolio--page section-outer">
+                    <div class="container">
+                        <div class="portfolio-inner">
+                            <div class="tabs">
+                                <div class="tabs-triggers">
+                                    <a href="#tab-1" class="tabs-triggers__item">
+                                        Все
+                                    </a>
+                                    <a href="#tab-2" class="tabs-triggers__item">
+                                        Модерн
+                                    </a>
+                                    <a href="#tab-3" class="tabs-triggers__item">
+                                        Классика
+                                    </a>
+                                </div>
+                                <div class="tabs-content">
+                                    
+                                    <div id="tab-1" class="tabs-content__item">
+                                        <div class="portfolio-content">
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-1.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-2.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-3.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-4.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-5.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-6.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-7.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-8.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-9.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="tab-2" class="tabs-content__item">
+                                        
+                                        <div class="portfolio-filter filter">
+                                        
+                                            <ul class="portfolio-filter__items filter-items">
+                                                <li data-filter="all" class="filter-item">
+                                                    Все
+                                                </li>
+                                                <li data-filter=".plastic" class="filter-item">
+                                                    Пластик
+                                                </li>
+                                                <li data-filter=".slick" class="filter-item">
+                                                    Пленка
+                                                </li>
+                                                <li data-filter=".slug" class="filter-item">
+                                                    Шпон
+                                                </li>
+                                                <li data-filter=".paint" class="filter-item">
+                                                    Краска
+                                                </li>
+                                            </ul>
+                                        
+                                            <div class="portfolio-content filter-content">
+                                                <div class="portfolio__item mix slug">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-1.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix slick paint">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-2.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix slug paint">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-3.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix plastic">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-4.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix plastic paint">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-5.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix slick">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-6.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix slick paint">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-7.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix slick">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-8.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                                <div class="portfolio__item mix plastic paint">
+                                                    <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                        <img class="portfolio__item-img" src="images/content/portfolio-9.jpg" alt="portfolio-img">
+                                                        <div class="portfolio__item-hover">
+                                                            <div class="portfolio__item-info">
+                                                                <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                                <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                            </div>
+                                                            <p class="portfolio__item-code">артикул 13428</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="tab-3" class="tabs-content__item">
+                                        <div class="portfolio-content">
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-1.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-2.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-3.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-4.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-5.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-6.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-7.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-8.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="portfolio__item">
+                                                <a class="portfolio__item-link" href="#" aria-label="Portfolio photo">
+                                                    <img class="portfolio__item-img" src="images/content/portfolio-9.jpg" alt="portfolio-img">
+                                                    <div class="portfolio__item-hover">
+                                                        <div class="portfolio__item-info">
+                                                            <h3 class="portfolio__item-title">Кухня Модерн</h3>
+                                                            <h4 class="portfolio__item-subtitle">пластик-шпон</h4>
+                                                        </div>
+                                                        <p class="portfolio__item-code">артикул 13428</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <ul class="pagination-list">
+                                    <li class="pagination-list__item pagination-list__item--active">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li class="pagination-list__item">
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li class="pagination-list__item">
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li class="pagination-list__item">
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li class="pagination-list__item">
+                                        <a href="#">5</a>
+                                    </li>
+                                    <li class="pagination-list__item pagination-list__item--all">
+                                        <a href="#">Показать все</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- / PORTFOLIO -->
+                
+                <!-- MODERN -->
+                <section class="project section-outer">
+                    <div class="container">
+                        <div class="project-inner">
+                            <h2 class="project__title title">
+                                <span class="title__text">
+                                    Кухни в стиле модерн
+                                </span>
+                            </h2>
+                            <p class="project__text">
+                                Кухни модерн – это легкий минимализм, практичная функциональность и комфорт одновременно. В этом стиле интерьера объединились множество других, поэтому он очень разный. Дизайн кухни в стиле модерн идеально подходит для активных молодых женщин, у которых нет времени на длительную уборку. Минимум декора и выступающих деталей, гладкие поверхности, простота и удобство – вот основные черты современного модерна.
+                            </p>
+                            <blockquote class="project__quote">
+                                Кухня в стиле модерн понравится тем, кто ищет компромисс между совсем уж минималистическим хай-теком и помпезной классикой. Предпочтение отдается легким формам в сочетании с функциональностью.
+                            </blockquote>
+                            <p class="project__text">
+                                Линии могут быть как прямыми, так и закругленными, например, край столешницы может иметь закругленный угол, можно выбрать подвесные шкафы с фигурными полками. Материалы для кухонь в стиле модерн используется самые разные: это и МДФ покрытый пленкой (самый недорогой вариант, при этом с широчайшим выбором по дизайну), и МДФ покрытый пластиком (один из самых практичных материалов), крашенный МДФ (для авторских кухонь) или фасады стекло в алюминиевом профиле.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- / MODERN -->
+                
+                <!-- ADVICE -->
+                <section class="advice" style="background-image: url(images/content/advice-bg.jpg);">
+                    <div class="container">
+                        <div class="advice-inner">
+                            <h2 class="advice__title">
+                                Консультация дизайнера в офисе или по телефону
+                            </h2>
+                            <div class="advice-content">
+                                <div class="advice-claim">
+                                    <h3 class="advice-claim__title">
+                                        Оставьте заявку и вместе мы сумеем воплотить в реальности ваши задумки и мечты!
+                                    </h3>
+                                    <form class="advice-claim__form advice-form">
+                                        <div class="advice-form__item">
+                                            <label for="name" class="advice-form__label">
+                                                Ваше имя
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                id="name"
+                                                class="advice-form__input"
+                                                pattern="[a-zA-Zа-яА-ЯёЁ ]+"
+                                                placeholder="Имя"
+                                                required
+                                            >
+                                        </div>
+                                        <div class="advice-form__item">
+                                            <label for="phone" class="advice-form__label">
+                                                Контактный телефон
+                                            </label>
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                id="phone"
+                                                class="advice-form__input"
+                                                pattern="^\+380\d{9}$"
+                                                placeholder="Телефон"
+                                                required
+                                            >
+                                        </div>
+                                        <label for="confidentiality" class="advice-form__item advice-form__item-checkbox">
+                                            <input
+                                                type="checkbox"
+                                                id="confidentiality"
+                                                class="advice-form__checkbox"
+                                                required
+                                            >
+                                            <span class="advice-form__checkbox-fake"></span>
+                                            <span class="advice-form__label advice-form__label-checkbox">
+                                                Я согласен с политикой конфиденциальности
+                                            </span>
+                                        </label>
+                                        <button class="advice-btn btn btn-bg" type="submit">
+                                            <span class="bt-text">
+                                                Получить консультацию дизайнера
+                                            </span>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="advice-info">
+                                    <h3 class="advice-info__title">
+                                        А что будет дальше после консультации?
+                                    </h3>
+                                    <ul class="advice-info__items">
+                                        <li class="advice-info__item">
+                                            <img class="advice-info__img" src="images/icons/advice-info-1.svg" alt="advice-info">
+                                            <p class="advice-info__text">
+                                                Спланируем этапы ремонтных работ и их стоимость
+                                            </p>
+                                        </li>
+                                        <li class="advice-info__item">
+                                            <img class="advice-info__img" src="images/icons/advice-info-2.svg" alt="advice-info">
+                                            <p class="advice-info__text">
+                                                Разработаем для вас бесплатный пробный эскиз и смету к нему
+                                            </p>
+                                        </li>
+                                        <li class="advice-info__item">
+                                            <img class="advice-info__img" src="images/icons/advice-info-3.svg" alt="advice-info">
+                                            <p class="advice-info__text">
+                                                Проведем замер помещения специалистом технологом-монтажником и доработаем эскиз с учетом проведенного замера
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- / ADVICE -->
+                
             </main>
-
+            
             <!-- FOOTER -->
             @include('components/_footer.html')
             <!-- / FOOTER -->
             
         </div>
-        
+
+        <!-- SCRIPTS -->
         @include('components/_scripts.html')
+        <!-- / SCRIPTS -->
 
     </body>
 </html>

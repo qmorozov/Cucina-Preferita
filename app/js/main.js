@@ -1,3 +1,5 @@
+// === BURGER BTN ===
+
 const btn = document.querySelector('.burger-btn'),
     header = document.querySelector('.header');
 btn.addEventListener('click', function () {
@@ -9,6 +11,7 @@ btn.addEventListener('click', function () {
     }
 });
 
+// === FUNCTION THAT HIDES SCROLLBAR ===
 
 const hideScroll = () => {
     const scrollWidth = `${getScrollbarWidth()}px`;
@@ -18,12 +21,16 @@ const hideScroll = () => {
     document.getElementById('header').style.paddingRight = scrollWidth;
 };
 
+// === FUNCTION THAT SHOWS SCROLLBAR ===
+
 const showScroll = () => {
     document.body.style.paddingRight = '';
     document.body.style.overflow = 'visible';
 
     document.getElementById('header').style.paddingRight = '';
 };
+
+// === FUNCTION THAT FIND SCROLLBAR WIDTH ===
 
 const getScrollbarWidth = () => {
     const outer = document.createElement('div');
@@ -78,50 +85,27 @@ function tabCLick(wrapper) {
 
 tabCLick(tabs);
 
-// === FILTER ===
+// === MIXTUP FILTER ==
 
-// const filterItemContent = document.querySelectorAll('.filter-content__item');
-// const filterItem = document.querySelectorAll('.filter-item');
+if (document.querySelector('.filter')) {
+    let mixer = mixitup('.filter');
+}
 
-// document.querySelector('.filter-items').addEventListener('click', event => {
-//     if (event.target.tagName !== 'LI') return false;
+const filterItem = document.querySelectorAll('.filter-item');
+    
+filterItem.forEach(function(item) {
+    item.addEventListener('click', function() {
+        filterItem.forEach(
+            (child) => child.classList.remove('filter-item--active')
+        );
+        item.classList.add('filter-item--active');
+    });
+    filterItem[0].click();
+});
 
-//     filterItem.forEach(
-//         (childe) => childe.classList.remove('filter-item--active')    
-//     );
-
-//     event.target.classList.add('filter-item--active');
-
-//     let filterClass = event.target.dataset['filter'];
-
-
-//     filterItemContent.forEach(elem => {
-//         elem.classList.remove('hide')
-//         if (elem.classList.contains(filterClass) && filterClass !== 'all') {
-//             elem.classList.add('hide')
-//         }
-//     });
-
-// })
-
-// === MIXTUP ==
-
-// let mixer = mixitup('.filter-content');
-
-// const filterItem = document.querySelectorAll('.filter-item');
-
-// filterItem.forEach(function(item) {
-//     item.addEventListener('click', function() {
-//         filterItem.forEach(
-//             (child) => child.classList.remove('filter-item--active')
-//         );
-//         item.classList.add('filter-item--active');
-//     });
-//     filterItem[0].click();
-// });
 
 // === SLIDER ===
-
+// === REVIEWS SLIDER ===
 const mySwiper = new Swiper('.reviews-slider', {
     slideClass: 'reviews-item',
     wrapperClass: 'reviews-items',
@@ -150,7 +134,7 @@ const mySwiper = new Swiper('.reviews-slider', {
     }
 });
 
-
+// === SHOWROOM SLIDER ===
 const swiperSlider = new Swiper(".showroom-container", {
     slideActiveClass: 'showroom-item--active',
 
@@ -181,100 +165,50 @@ const swiperSlider = new Swiper(".showroom-container", {
     }
 });
 
-function mobileSlider(container, width) {
-    const startSlider = document.querySelector(container);
+// === FUNCTION FOR MOBILE SLIDERs ===
 
-    let swiperStart;
-
-    function mobileSwiper() {
-        if (window.innerWidth <= width && startSlider.dataset.mobile == 'false') {
-            swiperStart = new Swiper(startSlider, {
-                slidesPerView: 1,
-                centeredSlides: true,
-                spaceBetween: 50,
-                pagination: {
-                    el: '.slider-pagination',
-                    clickable: true,
-                },
-                speed: 1000,
-            });
-            startSlider.dataset.mobile = 'true';
-        };
-        if (window.innerWidth > width) {
-            startSlider.dataset.mobile = 'false';
-            if (startSlider.classList.contains('swiper-container-initialized')) {
-                swiperStart.destroy();
-            }
-        };
-    }
-
-    mobileSwiper();
-
-    window.addEventListener('resize', () => {
+if(document.querySelector('[data-mobile]')) {
+    function mobileSlider(container, width) {
+        const startSlider = document.querySelector(container);
+    
+        let swiperStart;
+    
+        function mobileSwiper() {
+            if (window.innerWidth <= width && startSlider.dataset.mobile == 'false') {
+                swiperStart = new Swiper(startSlider, {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    spaceBetween: 50,
+                    pagination: {
+                        el: '.slider-pagination',
+                        clickable: true,
+                    },
+                    speed: 1000,
+                });
+                startSlider.dataset.mobile = 'true';
+            };
+            if (window.innerWidth > width) {
+                startSlider.dataset.mobile = 'false';
+                if (startSlider.classList.contains('swiper-container-initialized')) {
+                    swiperStart.destroy();
+                }
+            };
+        }
+    
         mobileSwiper();
-    })
-}
+    
+        window.addEventListener('resize', () => {
+            mobileSwiper();
+        })
+    }
+    
+    // === EXHIBITION SLIDER ===
 
-mobileSlider('.exhibition-slider', 900);
+    mobileSlider('.exhibition-slider', 900);
+    
+    // === DESIGNER SLIDER ===
 
-mobileSlider('.designer-content', 1060);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const subTabs = document.querySelectorAll('.subtabs');
-
-// SubTabCLick(subTabs);
-
-// function SubTabCLick (wrapper) {
-//     wrapper.forEach(function (box) {
-//         const item = box.querySelectorAll('.subtabs-triggers__item');
-//         const itemContent = box.querySelectorAll('.subtabs-content__item');
-
-//         item.forEach(onTabClick);
-
-//         function onTabClick(item) {
-//             item.addEventListener('click', function (e) {
-//             e.preventDefault();
-
-//             const id = e.target.getAttribute('href').replace('#', '');
-
-//             box.querySelectorAll('.subtabs-triggers__item').forEach(
-//                 (child) => child.classList.remove('subtabs-triggers__item--active')
-//             );
-//             box.querySelectorAll('.subtabs-content__item').forEach(
-//                 (child) => child.classList.remove('subtabs-content__item--active')
-//             );
-
-//             item.classList.add('subtabs-triggers__item--active');
-//             document.getElementById(id).classList.add('subtabs-content__item--active');
-
-//             console.log(item);
-//             });
-//         };
-//     });
-// };
-
-
-
+    mobileSlider('.designer-content', 1060);
+};
 
 //# sourceMappingURL=main.js.map

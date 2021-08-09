@@ -1,7 +1,7 @@
 @import "fonts";
 @import "vars";
 
-// === RESET ===
+// === RESET STYLES ===
 
 *,
 *::after,
@@ -73,6 +73,8 @@ body {
     @include Roboto($weight: $fw-regular);
 }
 
+// === PINCH THE TOP AND BOTTOM OF THE SITE ===
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -81,11 +83,15 @@ body {
     overflow: hidden;
 }
 
+// === CONTAINER ON WEBSITE ===
+
 .container {
     max-width: 1259px;
     padding: 0 15px;
     margin: 0 auto;
 }
+
+// === OUTER MARGIN ===
 
 .section-outer {
     margin-bottom: 120px;
@@ -94,6 +100,8 @@ body {
         margin-bottom: 100px;
     }
 }
+
+// === TITLE ===
 
 .title {
     display: flex;
@@ -128,6 +136,8 @@ body {
         max-width: fit-content;
     }
 }
+
+// === ALL BTN ON SITE ===
 
 .btn {
     display: block;
@@ -245,11 +255,15 @@ body {
     }
 }
 
+// === LOGO ===
+
 .logo__img {
     width: 230px;
     height: 41px;
     object-fit: contain;
 }
+
+// === MENU ===
 
 .menu__list {
     display: flex;
@@ -274,6 +288,8 @@ body {
         }
     }
 }
+
+// === MOBILE MENU BTN ===
 
 .burger-btn {
     position: relative;
@@ -323,6 +339,8 @@ body {
     }
 }
 
+// === PHONE ===
+
 .contact-phone {
     position: relative;
     display: flex;
@@ -353,6 +371,8 @@ body {
         }
     }
 }
+
+// ==== SOCIAL ===
 
 .social {
     &-item {
@@ -395,6 +415,8 @@ body {
         }
     }
 }
+
+// === SLIDER SWIPER ===
 
 .slider-navigation {
     position: absolute;
@@ -439,25 +461,30 @@ body {
     opacity: 0.3;
 }
 
-.swiper-pagination {
-    &-bullet {
-        width: 10px;
-        height: 10px;
-        background: none;
-        border: 1px solid $light-200;
-        opacity: 1;
-        transition: all .85s ease-in-out;
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: none;
+    border: 1px solid $light-200;
+    opacity: 1;
+    transition: all .85s ease-in-out;
 
-        & + & {
-            margin-left: 10px;
-        }
+    & + & {
+        margin-left: 10px;
+    }
 
-        &-active {
-            background: $primary;
-            box-shadow: 0 1px 4px rgba($dark-100, 0.25);
-        }
+    &-active {
+        background: $primary;
+        box-shadow: 0 1px 4px rgba($dark-100, 0.25);
     }
 }
+
+.swiper-slide-next,
+.swiper-slide-prev {
+    cursor: pointer;
+}
+
+// === TABS ==
 
 .tabs {
     &-triggers {
@@ -516,6 +543,8 @@ body {
     }
 }
 
+// === MIXITUP FILTER ===
+
 .filter {
     &-items {
         display: flex;
@@ -560,10 +589,7 @@ body {
     }
 }
 
-.swiper-slide-next,
-.swiper-slide-prev {
-    cursor: pointer;
-}
+// === BREADCRUMBS ===
 
 .breadcrumbs {
     &__list {
@@ -585,6 +611,10 @@ body {
                     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.8295 2.34569L32.2464 0.691389L32.9688 0L35.6921 2.84569L32.9688 5.69139L32.2464 5L33.8295 3.34569H0V2.34569H33.8295Z' fill='%23ca6d38'/%3e%3c/svg%3e ");
                 }
             }
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
 
         &-item a {
@@ -603,6 +633,49 @@ body {
                 background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.8295 2.34569L32.2464 0.691389L32.9688 0L35.6921 2.84569L32.9688 5.69139L32.2464 5L33.8295 3.34569H0V2.34569H33.8295Z' fill='%23DFD7D3'/%3e%3c/svg%3e ");
                 transition: $transition;
                 transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+// === PAGINATION ===
+
+.pagination {
+    margin-top: 60px;
+
+    &-list {
+        display: flex;
+        justify-content: center;
+
+        &__item {
+            width: 35px;
+            height: 35px;
+            padding: 6px 12px;
+            margin: 0 7.5px;
+            font-size: $fs-m;
+            line-height: $lh-xs;
+            white-space: nowrap;
+            transition: $transition;
+            @include Circle($weight: $fw-light);
+
+            &:hover {
+                color: $primary;
+            }
+
+            &--all {
+                width: auto;
+                padding: 0;
+                line-height: $lh-l;
+                border-bottom: 1px solid $dark-100;
+
+                &:hover {
+                    border-bottom-color: $primary;
+                }
+            }
+
+            &--active {
+                color: $primary;
+                border: 1px solid $primary;
             }
         }
     }

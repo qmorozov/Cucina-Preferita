@@ -15,6 +15,34 @@
         transform: translateY(-50%);
     }
 
+    &.portfolio--page {
+        &::before {
+            display: none;
+        }
+
+        .portfolio-inner {
+            margin-top: -320px;
+        }
+
+        .tabs-triggers__item {
+            color: $light-50;
+
+            &--active,
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        .filter-item {
+            color: $light-50;
+
+            &--active,
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
     &-content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
