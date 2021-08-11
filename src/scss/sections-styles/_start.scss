@@ -1,6 +1,7 @@
 .start {
     position: relative;
-    padding: 55px 0 100px 0;
+    // padding: 55px 0 100px 0;
+    padding: 45px 0 100px 0;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -10,6 +11,14 @@
 
         .start-content {
             margin-top: 150px;
+        }
+    }
+
+    &--product-page {
+        height: 487px;
+
+        .start__text {
+            margin-top: 25px;
         }
     }
 

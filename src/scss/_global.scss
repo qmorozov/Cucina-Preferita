@@ -78,6 +78,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
     padding-top: 70px;
     overflow: hidden;
@@ -594,9 +595,11 @@ body {
 .breadcrumbs {
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
 
         &-item {
+            margin-top: 10px;
             margin-right: 20px;
             font-size: 16px;
             line-height: $lh-xs;

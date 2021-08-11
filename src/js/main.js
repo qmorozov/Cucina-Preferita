@@ -1,5 +1,6 @@
 // === BURGER BTN ===
 
+
 const btn = document.querySelector('.burger-btn'),
     header = document.querySelector('.header');
 btn.addEventListener('click', function () {
@@ -92,9 +93,9 @@ if (document.querySelector('.filter')) {
 }
 
 const filterItem = document.querySelectorAll('.filter-item');
-    
-filterItem.forEach(function(item) {
-    item.addEventListener('click', function() {
+
+filterItem.forEach(function (item) {
+    item.addEventListener('click', function () {
         filterItem.forEach(
             (child) => child.classList.remove('filter-item--active')
         );
@@ -167,12 +168,12 @@ const swiperSlider = new Swiper(".showroom-container", {
 
 // === FUNCTION FOR MOBILE SLIDERs ===
 
-if(document.querySelector('[data-mobile]')) {
+if (document.querySelector('[data-mobile]')) {
     function mobileSlider(container, width) {
         const startSlider = document.querySelector(container);
-    
+
         let swiperStart;
-    
+
         function mobileSwiper() {
             if (window.innerWidth <= width && startSlider.dataset.mobile == 'false') {
                 swiperStart = new Swiper(startSlider, {
@@ -194,19 +195,47 @@ if(document.querySelector('[data-mobile]')) {
                 }
             };
         }
-    
+
         mobileSwiper();
-    
+
         window.addEventListener('resize', () => {
             mobileSwiper();
         })
     }
-    
+
     // === EXHIBITION SLIDER ===
 
     mobileSlider('.exhibition-slider', 900);
-    
+
     // === DESIGNER SLIDER ===
 
     mobileSlider('.designer-content', 1060);
 };
+
+const thumbsSlider = new Swiper(".thumbs-slider", {
+    slidesPerView: 6,
+    spaceBetween: 16,
+});
+
+const mainSlider = new Swiper(".main-slider", {
+    slidesPerView: 1,
+    speed: 1100,
+    effect: 'fade',
+
+    thumbs: {
+        swiper: thumbsSlider,
+    },
+
+    pagination: {
+        el: '.slider-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+    },
+});
+
+// watchSlidesVisibility: true,
+// watchSlidesProgress: true,
