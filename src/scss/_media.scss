@@ -984,6 +984,26 @@
     .map__item iframe {
         height: 600px;
     }
+
+    // === GUARANTEE ===
+    .guarantee {
+        margin-top: 50px;
+
+        &__text {
+            font-size: $fs-xxs;
+            line-height: 22px;
+        }
+
+        &__blockquote {
+            padding: 25px 0;
+            margin: 30px auto 50px;
+
+            &-text {
+                font-size: $fs-xs;
+                line-height: $lh-m;
+            }
+        }
+    }
 }
 
 @media (max-width: 450px) {
