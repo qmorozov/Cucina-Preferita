@@ -911,6 +911,11 @@
     .main-slider img {
         height: 290px;
     }
+
+    // === MAP ===
+    .map__item iframe {
+        height: 600px;
+    }
 }
 
 @media (max-width: 450px) {

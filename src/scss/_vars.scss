@@ -9,11 +9,11 @@
 }
 
 @mixin title {
-    font-size: $fs-xl;
-    line-height: $lh-xl;
-    color: $light-50;
-    letter-spacing: $lt-sp;
-    @include ArnoPro($weight: $fw-light);
+    font-size: $fs-xl; // 55px
+    line-height: $lh-xl; // 55px
+    color: $light-50; // #fff
+    letter-spacing: $lt-sp; // 0.01em
+    @include ArnoPro($weight: $fw-light); // 300
 }
 
 @mixin input {

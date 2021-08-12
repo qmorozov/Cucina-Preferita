@@ -62,4 +62,11 @@
 
 @import 'sections-styles/presentation';
 
+// === MAP ===
+.map__item iframe {
+    // width: 1230px;
+    width: 100%;
+    height: 646px;
+}
+
 @import "media";
