@@ -73,4 +73,15 @@
 
 @import 'sections-styles/price';
 
+// === MARK MAP ===
+
+.mark-map__item iframe {
+    width: 100%;
+    height: 432px;
+}
+
+// === CONTACT ===
+
+@import 'sections-styles/contact';
+
 @import "media";

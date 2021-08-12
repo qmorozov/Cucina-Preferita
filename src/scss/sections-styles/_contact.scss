@@ -1,0 +1,101 @@
+.contact {
+    margin: 81px 0;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-items {
+        max-width: 495px;
+    }
+}
+
+.contact-map {
+    max-width: 600px;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: $fs-m;
+        line-height: $lh-l;
+        text-align: center;
+        @include Circle($weight: $fw-light);
+    }
+
+    &__img {
+        width: 600px;
+        height: 580px;
+        object-fit: cover;
+    }
+}
+
+.contact__item {
+    position: relative;
+    padding: 25px 0;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        content: "";
+        background-color: $light-200;
+    }
+
+    &:first-child::before {
+        display: none;
+    }
+
+    &-title {
+        font-size: $fs-xs;
+        line-height: $lh-m;
+        color: $primary;
+        @include Circle($weight: $fw-light);
+    }
+
+    &-text {
+        margin-top: 10px;
+        font-size: $fs-m;
+        line-height: $lh-l;
+        @include Circle($weight: $fw-light);
+    }
+}
+
+.contact__item--social {
+    .contact__item-text {
+        position: relative;
+        padding-left: 30px;
+        transition: $transition;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            content: "";
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    a {
+        display: block;
+        width: fit-content;
+    }
+}
+
+.contact__item-text--inst::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.9396 0H4.06036C1.82144 0 0 1.82144 0 4.06036V10.9397C0 13.1785 1.82144 15 4.06036 15H10.9397C13.1785 15 15 13.1785 15 10.9397V4.06036C15 1.82144 13.1785 0 10.9396 0ZM7.49999 11.6014C5.23841 11.6014 3.39855 9.76156 3.39855 7.49999C3.39855 5.23841 5.23841 3.39855 7.49999 3.39855C9.76156 3.39855 11.6014 5.23841 11.6014 7.49999C11.6014 9.76156 9.76156 11.6014 7.49999 11.6014ZM11.6995 4.3658C11.0312 4.3658 10.4876 3.8222 10.4876 3.15387C10.4876 2.48554 11.0312 1.94183 11.6995 1.94183C12.3678 1.94183 12.9115 2.48554 12.9115 3.15387C12.9115 3.8222 12.3678 4.3658 11.6995 4.3658ZM7.50003 4.27783C5.72345 4.27783 4.27795 5.72322 4.27795 7.49991C4.27795 9.27649 5.72345 10.722 7.50003 10.722C9.27672 10.722 10.7221 9.27649 10.7221 7.49991C10.7221 5.72322 9.27672 4.27783 7.50003 4.27783ZM11.3669 3.15385C11.3669 2.97052 11.5162 2.82129 11.6995 2.82129C11.883 2.82129 12.0322 2.97041 12.0322 3.15385C12.0322 3.3373 11.883 3.48642 11.6995 3.48642C11.5162 3.48642 11.3669 3.33719 11.3669 3.15385Z' fill='%23CA6D38'/%3e%3c/svg%3e ");
+}
+
+.contact__item-text--vk::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='8' viewBox='0 0 15 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.6581 0.5425C14.7612 0.23 14.6581 0 14.1625 0H12.5224C12.1047 0 11.9125 0.1975 11.8095 0.4175C11.8095 0.4175 10.9741 2.245 9.79344 3.43C9.41195 3.7725 9.23652 3.8825 9.02768 3.8825C8.92465 3.8825 8.76592 3.7725 8.76592 3.46V0.5425C8.76592 0.1675 8.64897 0 8.30368 0H5.72514C5.46339 0 5.30745 0.175 5.30745 0.3375C5.30745 0.6925 5.89779 0.775 5.95905 1.775V3.945C5.95905 4.42 5.86437 4.5075 5.65552 4.5075C5.0986 4.5075 3.74529 2.6725 2.94332 0.5725C2.78182 0.165 2.62309 0 2.20262 0H0.562489C0.0946764 0 0 0.1975 0 0.4175C0 0.8075 0.55692 2.745 2.59246 5.305C3.94856 7.0525 5.8588 8 7.59639 8C8.64062 8 8.76871 7.79 8.76871 7.4275C8.76871 5.7575 8.67403 5.6 9.19754 5.6C9.4398 5.6 9.85749 5.71 10.8321 6.5525C11.9459 7.5525 12.1297 8 12.7535 8H14.3936C14.8614 8 15.0981 7.79 14.9617 7.375C14.6498 6.5025 12.5418 4.7075 12.4472 4.5875C12.2049 4.3075 12.2745 4.1825 12.4472 3.9325C12.45 3.93 14.4521 1.4 14.6581 0.5425Z' fill='%23CA6D38'/%3e%3c/svg%3e ");
+}

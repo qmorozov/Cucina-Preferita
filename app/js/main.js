@@ -236,7 +236,4 @@ const mainSlider = new Swiper(".main-slider", {
         prevEl: '.slider-button-prev',
     },
 });
-
-// watchSlidesVisibility: true,
-// watchSlidesProgress: true,
 //# sourceMappingURL=main.js.map
