@@ -355,6 +355,21 @@
     .presentation-slider {
         width: 700px;
     }
+
+    // === PRICE ===
+    .price__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &-text {
+            margin-top: 5px;
+        }
+
+        &-coat {
+            margin-top: 15px;
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -700,6 +715,24 @@
     .portfolio-content {
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: minmax(290px, 290px);
+    }
+
+    // === PRICE ===
+    .price__item {
+        &-title {
+            font-size: $fs-xs;
+            line-height: $lh-m;
+        }
+
+        &-text {
+            font-size: $fs-xxs;
+            line-height: 22px;
+        }
+
+        &-coat {
+            font-size: $fs-xs;
+            line-height: $lh-m;
+        }
     }
 }
 
