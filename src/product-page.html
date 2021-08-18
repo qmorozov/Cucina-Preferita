@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
+    
     <!-- HEAD -->
     @include('components/_head.html')
     <!-- / HEAD -->
+    
     <body>
+    
         <div class="wrapper">
+    
             <!-- HEADER -->
             @include('components/_header.html')
             <!-- / HEADER -->
+    
             <main>
+    
                 <!-- START -->
-                <section class="start start--product-page" style="background-image: url(images/content/start-bg-1.jpg);">
+                <section class="start section-outer start--product-page" style="background-image: url(images/content/start-bg-2.jpg);">
                     <div class="container">
                         <div class="start-inner">
                             <div class="breadcrumbs start-breadcrumbs">
@@ -49,11 +55,13 @@
                     </div>
                 </section>
                 <!-- / START -->
+    
                 <!-- PRESENTATION -->
                 @include('components/_presentation.html')
                 <!-- / PRESENTATION -->
+    
                 <!-- ADVICE -->
-                <section class="advice" style="background-image: url(images/content/advice-bg.jpg);">
+                <section class="advice lazyload" data-bg="images/content/advice-bg.jpg">
                     <div class="container">
                         <div class="advice-inner">
                             <h2 class="advice__title">
@@ -102,7 +110,7 @@
                                             >
                                             <span class="advice-form__checkbox-fake"></span>
                                             <span class="advice-form__label advice-form__label-checkbox">
-                                                Я согласен с политикой конфиденциальности
+                                                Я согласен с <a class="advice-form__label-link" href="confidentiality.html" aria-label="confidentiality">политикой конфиденциальности</a>
                                             </span>
                                         </label>
                                         <button class="advice-btn btn btn-bg" type="submit">
@@ -142,13 +150,18 @@
                     </div>
                 </section>
                 <!-- / ADVICE -->
+    
             </main>
+    
             <!-- FOOTER -->
             @include('components/_footer.html')
             <!-- / FOOTER -->
+    
         </div>
+    
         <!-- SCRIPTS -->
         @include('components/_scripts.html')
         <!-- / SCRIPTS -->
+    
     </body>
 </html>

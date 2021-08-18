@@ -1,15 +1,23 @@
 // === BURGER BTN ===
 
-
 const btn = document.querySelector('.burger-btn'),
-    header = document.querySelector('.header');
-btn.addEventListener('click', function () {
+    header = document.querySelector('.header'),
+    listItem = document.querySelectorAll('.menu__list-item');
+
+    btn.addEventListener('click', function () {
     header.classList.toggle('header--active')
     if (header.classList.contains('header--active')) {
         hideScroll();
     } else {
         showScroll();
     }
+});
+
+listItem.forEach(function(item) {
+    item.addEventListener('click', function() {
+        header.classList.remove('header--active');
+        showScroll();
+    })
 });
 
 // === FUNCTION THAT HIDES SCROLLBAR ===
@@ -236,3 +244,20 @@ const mainSlider = new Swiper(".main-slider", {
         prevEl: '.slider-button-prev',
     },
 });
+
+// === ANCHORS ===
+
+// const anchors = document.querySelectorAll('a[href*="#"]');
+
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (event) {
+//     event.preventDefault();
+    
+//     const blockID = anchor.getAttribute('href');
+    
+//     document.querySelector('' + blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     });
+//   });
+// };

@@ -1,0 +1,50 @@
+// === PRIVACY ===
+
+.privacy {
+    margin: 60px 0;
+    @include Circle($weight: $fw-light);
+
+    &__items {
+        counter-reset: privacy__items;
+    }
+
+    &__text {
+        margin-top: 50px;
+    }
+}
+
+.privacy__item {
+    &::before {
+        content: counter(privacy__items) ". ";
+        counter-increment: privacy__items;
+    }
+
+    & + & {
+        margin-top: 50px;
+    }
+
+    &-list {
+        margin-top: 30px;
+        counter-reset: privacy__item-list;
+    }
+
+    &-title {
+        display: inline;
+        font-size: $fs-m;
+        text-transform: uppercase;
+        @include Circle($weight: $fw-light);
+    }
+
+    &-text {
+        & + & {
+            margin-top: 10px;
+        }
+
+        &::before {
+            content: counter(privacy__items) "." counter(privacy__item-list) " ";
+            counter-increment: privacy__item-list;
+        }
+    }
+}
+
+// === / PRIVACY ===

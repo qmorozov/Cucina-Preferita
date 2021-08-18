@@ -76,6 +76,28 @@
             display: inline;
             margin-left: 15px;
         }
+
+        &-link {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: auto;
+                width: 0%;
+                height: 1px;
+                content: "";
+                background-color: $light-200;
+                transition: $transition;
+            }
+
+            &:hover::before {
+                right: auto;
+                left: 0;
+                width: 100%;
+            }
+        }
     }
 
     &__checkbox {
