@@ -667,7 +667,9 @@ body {
                 color: $primary;
             }
 
-            &--all {
+            &--all,
+            &--first,
+            &--last {
                 width: auto;
                 padding: 0;
                 line-height: $lh-l;
@@ -676,6 +678,11 @@ body {
                 &:hover {
                     border-bottom-color: $primary;
                 }
+            }
+
+            &--first,
+            &--last {
+                border: none;
             }
 
             &--active {

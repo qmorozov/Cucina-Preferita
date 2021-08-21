@@ -76,7 +76,8 @@ const scriptLibs = () => {
             'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/lazysizes/lazysizes.min.js',
             'node_modules/mixitup/dist/mixitup.min.js',
-            'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js'
+            'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
+            'node_modules/fslightbox/index.js'
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify().on("error", notify.onError()))

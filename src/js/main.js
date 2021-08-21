@@ -4,7 +4,7 @@ const btn = document.querySelector('.burger-btn'),
     header = document.querySelector('.header'),
     listItem = document.querySelectorAll('.menu__list-item');
 
-    btn.addEventListener('click', function () {
+btn.addEventListener('click', function () {
     header.classList.toggle('header--active')
     if (header.classList.contains('header--active')) {
         hideScroll();
@@ -13,8 +13,8 @@ const btn = document.querySelector('.burger-btn'),
     }
 });
 
-listItem.forEach(function(item) {
-    item.addEventListener('click', function() {
+listItem.forEach(function (item) {
+    item.addEventListener('click', function () {
         header.classList.remove('header--active');
         showScroll();
     })
@@ -114,136 +114,159 @@ filterItem.forEach(function (item) {
 
 
 // === SLIDER ===
-// === REVIEWS SLIDER ===
-const mySwiper = new Swiper('.reviews-slider', {
-    slideClass: 'reviews-item',
-    wrapperClass: 'reviews-items',
 
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    simulateTouch: false,
-    spaceBetween: 160,
+const swiperWrapper = document.querySelector('.swiper-wrapper'); 
+const swiperContainer = document.querySelector('.swiper-container');
 
-    pagination: {
-        el: '.slider-pagination',
-        clickable: true,
-    },
+if (swiperWrapper || swiperContainer) {
 
-    navigation: {
-        nextEl: '.slider-button-next',
-        prevEl: '.slider-button-prev',
-    },
+    // === FUNCTION FOR MOBILE SLIDERs ===
 
-    speed: 1500,
-
-    breakpoints: {
-        1000: {
-            simulateTouch: true
-        }
-    }
-});
-
-// === SHOWROOM SLIDER ===
-const swiperSlider = new Swiper(".showroom-container", {
-    slideActiveClass: 'showroom-item--active',
-
-    initialSlide: 1,
-    centeredSlides: true,
-    spaceBetween: 58,
-    slideToClickedSlide: true,
-
-    pagination: {
-        el: '.slider-pagination',
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: '.slider-button-next',
-        prevEl: '.slider-button-prev',
-    },
-
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            speed: 1100,
-        },
-        1000: {
-            slidesPerView: 3,
-            speed: 1500,
-        },
-    }
-});
-
-// === FUNCTION FOR MOBILE SLIDERs ===
-
-if (document.querySelector('[data-mobile]')) {
-    function mobileSlider(container, width) {
-        const startSlider = document.querySelector(container);
-
-        let swiperStart;
-
-        function mobileSwiper() {
-            if (window.innerWidth <= width && startSlider.dataset.mobile == 'false') {
-                swiperStart = new Swiper(startSlider, {
-                    slidesPerView: 1,
-                    centeredSlides: true,
-                    spaceBetween: 50,
-                    pagination: {
-                        el: '.slider-pagination',
-                        clickable: true,
-                    },
-                    speed: 1000,
+    if (document.querySelector('[data-mobile]')) {
+        function mobileSlider(container, width) {
+            const startSlider = document.querySelectorAll(container);
+            let swiperStart;
+    
+            function mobileSwiper() {
+    
+                startSlider.forEach(function(item) {
+    
+                    if (window.innerWidth <= width && item.dataset.mobile == 'false') {
+                        swiperStart = new Swiper(item, {
+                            slidesPerView: 1,
+                            centeredSlides: true,
+                            spaceBetween: 50,
+                            pagination: {
+                                el: '.slider-pagination',
+                                clickable: true,
+                            },
+                            speed: 1000,
+                        });
+                        item.dataset.mobile = 'true';
+                    };
+                    if (window.innerWidth > width) {
+                        item.dataset.mobile = 'false';
+                        if (item.classList.contains('swiper-container-initialized')) {
+                            swiperStart.destroy();
+                        };
+                    };
+    
                 });
-                startSlider.dataset.mobile = 'true';
+            
             };
-            if (window.innerWidth > width) {
-                startSlider.dataset.mobile = 'false';
-                if (startSlider.classList.contains('swiper-container-initialized')) {
-                    swiperStart.destroy();
-                }
-            };
-        }
-
-        mobileSwiper();
-
-        window.addEventListener('resize', () => {
+    
             mobileSwiper();
-        })
-    }
+    
+            window.addEventListener('resize', () => {
+                mobileSwiper();
+            });
+        };
+    
+        if (document.querySelector('.exhibition-slider')) {
+            mobileSlider('.exhibition-slider', 900);
+        };
+    
+        if (document.querySelector('.designer-content')) {
+            mobileSlider('.designer-content', 1060);
+        };
+    
+        if (document.querySelector('.recall__item-images')) {
+            mobileSlider('.recall__item-images', 1105);
+        };
+    };
 
-    // === EXHIBITION SLIDER ===
+    // === REVIEWS SLIDER ===
 
-    mobileSlider('.exhibition-slider', 900);
+    let reviews = new Swiper(".reviews-slider", {
+        slideClass: 'reviews-item',
+        wrapperClass: 'reviews-items',
 
-    // === DESIGNER SLIDER ===
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        simulateTouch: false,
+        spaceBetween: 160,
 
-    mobileSlider('.designer-content', 1060);
+        pagination: {
+            el: '.slider-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.slider-button-next',
+            prevEl: '.slider-button-prev',
+        },
+
+        speed: 1500,
+
+        breakpoints: {
+            1000: {
+                simulateTouch: true
+            }
+        }
+    });
+
+    // === SHOWROOM SLIDER ===
+
+    let swiperSlider = new Swiper(".showroom-container", {
+        slideActiveClass: 'showroom-item--active',
+
+        initialSlide: 1,
+        centeredSlides: true,
+        spaceBetween: 58,
+        slideToClickedSlide: true,
+
+        pagination: {
+            el: '.slider-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.slider-button-next',
+            prevEl: '.slider-button-prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                speed: 1100,
+            },
+            1000: {
+                slidesPerView: 3,
+                speed: 1500,
+            },
+        }
+    });
+
+    // === THUMBS SLIDER ===
+
+    let thumbsSlider = new Swiper(".thumbs-slider", {
+        slidesPerView: 6,
+        spaceBetween: 16,
+    });
+
+    // === MAIN SLIDER ===
+
+    let mainSlider = new Swiper(".main-slider", {
+        slidesPerView: 1,
+        speed: 1100,
+        effect: 'fade',
+
+        thumbs: {
+            swiper: thumbsSlider,
+        },
+
+        pagination: {
+            el: '.slider-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.slider-button-next',
+            prevEl: '.slider-button-prev',
+        },
+    });
+
 };
-
-const thumbsSlider = new Swiper(".thumbs-slider", {
-    slidesPerView: 6,
-    spaceBetween: 16,
-});
-
-const mainSlider = new Swiper(".main-slider", {
-    slidesPerView: 1,
-    speed: 1100,
-    effect: 'fade',
-
-    thumbs: {
-        swiper: thumbsSlider,
-    },
-
-    pagination: {
-        el: '.slider-pagination',
-        clickable: true,
-    },
-
-    navigation: {
-        nextEl: '.slider-button-next',
-        prevEl: '.slider-button-prev',
-    },
-});
 
 // === ANCHORS ===
 
@@ -252,9 +275,9 @@ const mainSlider = new Swiper(".main-slider", {
 // for (let anchor of anchors) {
 //   anchor.addEventListener('click', function (event) {
 //     event.preventDefault();
-    
+
 //     const blockID = anchor.getAttribute('href');
-    
+
 //     document.querySelector('' + blockID).scrollIntoView({
 //       behavior: 'smooth',
 //       block: 'start'

@@ -175,6 +175,12 @@
             margin-top: 50px;
         }
     }
+
+    // === RECALL ===
+    .recall-img__item {
+        width: 500px;
+        height: 300px;
+    }
 }
 
 @media (max-width: 1060px) {
@@ -296,6 +302,11 @@
     // === PRESENTATION ===
     .presentation-slider {
         width: 800px;
+    }
+
+    // === RECALL ===
+    .recall__item + .recall__item {
+        margin-top: 160px;
     }
 }
 
@@ -615,20 +626,31 @@
     }
 
     // === START - PAGE TABSS ===
-    .filter {
-        &-items {
-            // flex-direction: column;
-            // justify-content: space-evenly;
-            // align-items: center;
+    .filter-item {
+        margin-bottom: 35px;
+        margin-left: 20px;
+    }
+
+    // === RECALL ===
+    .recall {
+        &__item {
+            padding: 30px;
+
+            &-title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            &-text,
+            &-name {
+                font-size: 18px;
+                line-height: 26px;
+            }
         }
 
-        &-item {
-            margin-bottom: 35px;
-            margin-left: 20px;
-
-            & + & {
-                // margin-left: 10px;
-            }
+        &-img__item {
+            width: 400px;
+            height: 290px;
         }
     }
 }
@@ -812,18 +834,14 @@
     }
 
     // === CONTACT ===
-    .contact {
-        &-map img {
-            width: 400px;
-            height: 387px;
-        }
+    .contact-map img {
+        width: 400px;
+        height: 387px;
     }
 
     // === PRESENTATION ===
-    .presentation {
-        &-inner {
-            margin-top: -140px;
-        }
+    .presentation-inner {
+        margin-top: -140px;
     }
 }
 
@@ -859,8 +877,17 @@
     .pagination-list {
         flex-wrap: wrap;
 
-        &__item--all {
-            margin-top: 25px;
+        &__item {
+            margin: 0;
+
+            &--all {
+                margin-top: 25px;
+            }
+
+            &--first,
+            &--last {
+                font-size: $fs-xxs;
+            }
         }
     }
 
@@ -1060,6 +1087,22 @@
             }
         }
     }
+
+    // === RECALL ===
+    .recall {
+        &__item {
+            padding: 20px;
+        }
+
+        &-img__item {
+            width: 350px;
+            height: 290px;
+        }
+    }
+
+    .recall-img__link + .recall-img__link {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1173,6 +1216,12 @@
             }
         }
     }
+
+    // === RECALL ===
+    .recall-img__item {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -1269,6 +1318,12 @@
                 height: 30px;
             }
         }
+    }
+
+    // === RECALL ===
+    .recall-img__item {
+        width: 220px;
+        height: 220px;
     }
 }
 
