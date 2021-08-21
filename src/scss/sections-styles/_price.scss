@@ -1,5 +1,5 @@
 .price {
-    margin-bottom: 60px;
+    margin: 80px 0 60px;
 
     &-inner {
         max-width: 870px;
@@ -41,8 +41,12 @@
             background-color: $light-200;
         }
 
-        &:first-child::before {
-            display: none;
+        &:first-child {
+            padding-top: 0;
+
+            &::before {
+                display: none;
+            }
         }
     }
 

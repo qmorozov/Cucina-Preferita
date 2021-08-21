@@ -18,6 +18,7 @@ input::-webkit-inner-spin-button {
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 div {
@@ -690,5 +691,44 @@ body {
                 border: 1px solid $primary;
             }
         }
+    }
+}
+
+// === SCROLL TO TOP ===
+
+.scroll-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background-color: $dark-100;
+    opacity: 1;
+    transition: $transition;
+
+    &__arrow {
+        position: absolute;
+        top: 43%;
+        left: 48%;
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -50%);
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $light-50;
+            transform: rotate(-90deg);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px rgb($dark-100, 0.4);
+    }
+
+    &--hide {
+        opacity: 0;
     }
 }

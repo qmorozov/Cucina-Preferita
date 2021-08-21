@@ -396,17 +396,21 @@
     }
 
     // === PRICE ===
-    .price__item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .price {
+        margin: 50px 0 55px;
 
-        &-text {
-            margin-top: 5px;
-        }
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
-        &-coat {
-            margin-top: 15px;
+            &-text {
+                margin-top: 5px;
+            }
+
+            &-coat {
+                margin-top: 15px;
+            }
         }
     }
 }
@@ -660,6 +664,11 @@
     .section-outer,
     .section-outer--small {
         margin-bottom: 50px;
+    }
+
+    .scroll-top {
+        right: 20px;
+        bottom: 20px;
     }
 
     // === INTRO ===
