@@ -288,4 +288,12 @@ window.onload = function () {
 
     };
 
+    // === AOS ANIMATE ===
+
+    AOS.init({
+        duration: 800,
+        offset: 130,
+        once: true,
+    });
+
 };

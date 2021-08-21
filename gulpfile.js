@@ -63,7 +63,8 @@ const styles = () => {
 const styleLibs = () => {
     return src([
             'node_modules/normalize.css/normalize.css',
-            'node_modules/swiper/swiper-bundle.min.css'
+            'node_modules/swiper/swiper-bundle.min.css',
+            'node_modules/aos/dist/aos.css'
         ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
@@ -77,7 +78,9 @@ const scriptLibs = () => {
             'node_modules/lazysizes/lazysizes.min.js',
             'node_modules/mixitup/dist/mixitup.min.js',
             'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js',
-            'node_modules/fslightbox/index.js'
+            'node_modules/fslightbox/index.js',
+            'node_modules/aos/dist/aos.js'
+            
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify().on("error", notify.onError()))
