@@ -4,7 +4,7 @@
     }
 
     &__text {
-        max-width: 1080px;
+        max-width: rem(1080px);
         margin: 0 auto;
         font-size: $fs-xs;
         line-height: $lh-m;
@@ -12,9 +12,9 @@
 
     &__quote {
         position: relative;
-        max-width: 945px;
-        padding: 35px 0;
-        margin: 50px auto;
+        max-width: rem(945px);
+        padding: rem(35px) 0;
+        margin: rem(50px) auto;
         font-size: $fs-m;
         line-height: $lh-l;
         text-align: center;
@@ -25,7 +25,7 @@
             right: 50%;
             left: 50%;
             width: 80%;
-            height: 1px;
+            height: rem(1px);
             content: "";
             background-color: $light-200;
             transform: translateX(-50%);

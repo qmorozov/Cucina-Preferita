@@ -26,7 +26,7 @@
 
     &__title {
         width: 100%;
-        max-width: 630px;
+        max-width: rem(630px);
         font-size: $fs-xxl;
         line-height: $lh-xxl;
         @include ArnoPro($weight: $fw-light);
@@ -34,13 +34,13 @@
 
     &__text {
         width: 100%;
-        max-width: 495px;
-        margin-top: 50px;
+        max-width: rem(495px);
+        margin-top: rem(50px);
         @include Circle($weight:$fw-light);
     }
 
     &__btn {
-        margin-top: 96px;
+        margin-top: rem(96px);
     }
 }
 

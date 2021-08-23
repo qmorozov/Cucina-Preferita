@@ -1,7 +1,7 @@
 // === PRIVACY ===
 
 .privacy {
-    margin: 60px 0;
+    margin: rem(60px) 0;
     @include Circle($weight: $fw-light);
 
     &__items {
@@ -9,7 +9,7 @@
     }
 
     &__text {
-        margin-top: 50px;
+        margin-top: rem(50px);
     }
 }
 
@@ -20,11 +20,11 @@
     }
 
     & + & {
-        margin-top: 50px;
+        margin-top: rem(50px);
     }
 
     &-list {
-        margin-top: 30px;
+        margin-top: rem(30px);
         counter-reset: privacy__item-list;
     }
 
@@ -37,7 +37,7 @@
 
     &-text {
         & + & {
-            margin-top: 10px;
+            margin-top: rem(10px);
         }
 
         &::before {

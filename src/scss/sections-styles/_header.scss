@@ -15,7 +15,7 @@
             flex-direction: column;
             align-items: center;
             height: 100vh;
-            padding-bottom: 53px;
+            padding-bottom: rem(53px);
             color: $light-50;
             visibility: visible;
             opacity: 1;
@@ -38,7 +38,7 @@
         }
 
         .menu {
-            padding: 40px 64px 53px 64px;
+            padding: rem(40px) rem(64px) rem(53px) rem(64px);
 
             &__list {
                 flex-direction: column;
@@ -48,7 +48,7 @@
                     text-align: center;
 
                     & + .menu__list-item {
-                        margin-top: 30px;
+                        margin-top: rem(30px);
                         margin-left: 0;
                     }
                 }
@@ -82,7 +82,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 70px;
+        height: rem(70px);
     }
 
     &-navigation {
@@ -91,7 +91,7 @@
     }
 
     &-contact {
-        margin-left: 35px;
+        margin-left: rem(35px);
 
         .contact-phone__img path {
             fill: $primary;

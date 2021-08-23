@@ -7,15 +7,15 @@
     }
 
     &-items {
-        max-width: 495px;
+        max-width: rem(495px);
     }
 }
 
 .contact-map {
-    max-width: 600px;
+    max-width: rem(600px);
 
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
         font-size: $fs-m;
         line-height: $lh-l;
         text-align: center;
@@ -23,15 +23,16 @@
     }
 
     &__img {
-        width: 600px;
-        height: 580px;
+        display: flex;
+        width: rem(600px);
+        height: rem(580px);
         object-fit: cover;
     }
 }
 
 .contact__item {
     position: relative;
-    padding: 25px 0;
+    padding: rem(25px) 0;
 
     &::before {
         position: absolute;
@@ -39,7 +40,7 @@
         right: 0;
         left: 0;
         width: 100%;
-        height: 1px;
+        height: rem(1px);
         content: "";
         background-color: $light-200;
     }
@@ -61,10 +62,11 @@
 
     &-text {
         display: block;
-        margin-top: 10px;
+        margin-top: rem(10px);
         font-size: $fs-m;
         font-style: normal;
         line-height: $lh-l;
+        transition: $transition;
         @include Circle($weight: $fw-light);
     }
 }
@@ -72,7 +74,7 @@
 .contact__item--social {
     .contact__item-text {
         position: relative;
-        padding-left: 30px;
+        padding-left: rem(30px);
         transition: $transition;
 
         &::before {
@@ -80,8 +82,8 @@
             top: 50%;
             bottom: 50%;
             left: 0;
-            width: 15px;
-            height: 15px;
+            width: rem(15px);
+            height: rem(15px);
             content: "";
             background-repeat: no-repeat;
             transform: translateY(-50%);
@@ -95,6 +97,13 @@
     a {
         display: block;
         width: fit-content;
+    }
+}
+
+.contact__item--phone,
+.contact__item--email {
+    .contact__item-text:hover {
+        color: $primary;
     }
 }
 

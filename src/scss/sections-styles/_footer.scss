@@ -1,8 +1,7 @@
 // === FOOTER ===
 
 .footer {
-    padding: 54px 0 62px 0;
-    // margin-top: auto;
+    padding: rem(54px) 0 rem(62px) 0;
     background-color: $dark-200;
 
     &-inner {
@@ -20,12 +19,12 @@
         }
 
         .contact-phone__img {
-            top: -6px;
+            top: rem(-6px);
             left: 0;
         }
 
         &__item + &__item {
-            margin-top: 15px;
+            margin-top: rem(15px);
         }
     }
 
@@ -36,15 +35,15 @@
     &-menu {
         display: flex;
         justify-content: space-between;
-        width: 280px;
+        width: rem(280px);
 
         &__list {
             width: 100%;
-            max-width: 110px;
+            max-width: rem(110px);
         }
 
         &__item + &__item {
-            margin-top: 20px;
+            margin-top: rem(20px);
         }
 
         &__link {
@@ -62,7 +61,7 @@
     }
 
     &-copyright-info {
-        width: 254px;
+        width: rem(254px);
         font-size: $fs-xs;
         line-height: $lh-m;
         color: rgba($light-50, 0.5);
@@ -70,13 +69,13 @@
     }
 
     &-copyright {
-        margin-top: 36px;
+        margin-top: rem(36px);
     }
 
     &-confidentiality,
     &-mobile-confidentiality {
         display: inline-block;
-        margin-top: 10px;
+        margin-top: rem(10px);
         border-bottom: 1px solid rgba(#856767, 0.5);
         transition: $transition;
 
@@ -89,8 +88,8 @@
 
     &-mobile-info {
         display: none;
-        width: 290px;
-        margin-top: 30px;
+        width: rem(290px);
+        margin-top: rem(30px);
         font-size: $fs-xs;
         line-height: $lh-m;
         color: rgba($light-50, 0.5);

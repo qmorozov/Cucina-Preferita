@@ -21,7 +21,7 @@
         }
 
         .portfolio-inner {
-            margin-top: -320px;
+            margin-top: rem(-320px);
         }
 
         .tabs-triggers__item {
@@ -46,7 +46,7 @@
     &-content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: minmax(394px, 394px);
+        grid-auto-rows: minmax(rem(394px), rem(394px));
         grid-auto-flow: row dense;
         grid-gap: 10px;
     }
@@ -56,17 +56,18 @@
         $item: &;
 
         &-img {
+            display: flex;
             width: 100%;
-            max-width: 630px;
+            max-width: rem(630px);
             height: 100%;
-            max-height: 394px;
+            max-height: rem(394px);
         }
 
         &:nth-child(6n + 1) {
             grid-column: span 2/ span 3;
 
             #{$item}-hover {
-                padding: 25px;
+                padding: rem(25px);
             }
         }
 
@@ -90,7 +91,7 @@
             grid-column: span 2/ span 5;
 
             #{$item}-hover {
-                padding: 25px;
+                padding: rem(25px);
             }
         }
 
@@ -104,7 +105,7 @@
             justify-content: space-between;
             width: 100%;
             height: 100%;
-            padding: 25px 5px;
+            padding: rem(25px) rem(5px);
             font-size: $fs-s;
             line-height: $lh-m;
             color: $light-50;
@@ -116,7 +117,7 @@
 
         &-title {
             font-size: $fs-l;
-            line-height: 35px;
+            line-height: rem(35px);
             letter-spacing: $lt-sp;
             @include ArnoPro($weight: $fw-regular);
         }

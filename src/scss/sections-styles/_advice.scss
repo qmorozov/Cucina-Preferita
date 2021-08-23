@@ -14,24 +14,24 @@
 
     &-inner {
         position: relative;
-        height: 844px;
-        padding: 90px 0;
+        height: rem(844px);
+        padding: rem(90px) 0;
         color: $light-50;
     }
 
     &__title {
-        max-width: 600px;
+        max-width: rem(600px);
         @include title;
     }
 
     &-content {
         display: flex;
         justify-content: space-between;
-        margin-top: 35px;
+        margin-top: rem(35px);
     }
 
     &-claim {
-        max-width: 580px;
+        max-width: rem(580px);
 
         &__title {
             @include Circle($weight: $fw-light);
@@ -39,7 +39,7 @@
     }
 
     &-btn {
-        margin-top: 40px;
+        margin-top: rem(40px);
         font-size: $fs-s;
         line-height: $lh-xs;
         @include Circle($weight: $fw-regular);
@@ -47,11 +47,11 @@
 }
 
 .advice-form {
-    margin-top: 45px;
+    margin-top: rem(45px);
 
     &__item {
         & + & {
-            margin-top: 30px;
+            margin-top: rem(30px);
         }
 
         &-checkbox {
@@ -62,7 +62,7 @@
     }
 
     &__input {
-        margin-top: 10px;
+        margin-top: rem(10px);
         @include input;
     }
 
@@ -74,7 +74,7 @@
 
         &-checkbox {
             display: inline;
-            margin-left: 15px;
+            margin-left: rem(15px);
         }
 
         &-link {
@@ -88,7 +88,7 @@
                     bottom: 0;
                     left: auto;
                     width: 0%;
-                    height: 1px;
+                    height: rem(1px);
                     content: "";
                     background-color: rgba($light-300, 0.8);
                     transition: $transition;
@@ -109,16 +109,16 @@
         &-fake {
             position: relative;
             display: block;
-            width: 20px;
-            height: 20px;
-            border: 1px solid $light-100;
+            width: rem(20px);
+            height: rem(20px);
+            border: rem(1px) solid $light-100;
 
             &::before {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 12px;
-                height: 8px;
+                width: rem(12px);
+                height: rem(8px);
                 content: "";
                 background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.8536 1.35359L5.50004 8.70714L0.646484 3.85359L1.35359 3.14648L5.50004 7.29293L12.1465 0.646484L12.8536 1.35359Z' fill='%23F3F1EF'/%3e%3c/svg%3e ");
                 opacity: 0;
@@ -140,13 +140,13 @@
 
     &__items {
         position: relative;
-        margin-top: 43px;
+        margin-top: rem(43px);
 
         &::before {
             position: absolute;
             top: 10%;
-            left: -45px;
-            width: 2px;
+            left: rem(-45px);
+            width: rem(2px);
             height: 75%;
             content: "";
             background-color: $light-50;
@@ -156,31 +156,31 @@
     &__item {
         position: relative;
         display: flex;
-        max-width: 455px;
+        max-width: rem(455px);
 
         &::before {
             position: absolute;
             top: 50%;
-            left: -45px;
-            width: 26px;
-            height: 2px;
+            left: rem(-45px);
+            width: rem(26px);
+            height: rem(2px);
             content: "";
             background-color: $light-50;
             transform: translateY(-50%);
         }
 
         & + & {
-            margin-top: 35px;
+            margin-top: rem(35px);
         }
     }
 
     &__img {
-        width: 40px;
-        height: 40px;
+        width: rem(40px);
+        height: rem(40px);
     }
 
     &__text {
-        margin-left: 25px;
+        margin-left: rem(25px);
         font-size: $fs-xs;
         line-height: $lh-m;
         @include Circle($weight: $fw-light);

@@ -2,15 +2,14 @@
 
 .presentation {
     &-inner {
-        // margin-top: -70px;
-        margin-top: -180px;
+        margin-top: rem(-180px);
     }
 
     &-slider {
         position: relative;
-        width: 1020px;
+        width: rem(1020px);
         height: 100%;
-        padding-bottom: 70px;
+        padding-bottom: rem(70px);
         margin: 0 auto;
 
         .slider-navigation {
@@ -25,8 +24,8 @@
     position: relative;
 
     &__slide {
-        width: 1020px;
-        height: 620px;
+        width: rem(1020px);
+        height: rem(620px);
         object-fit: cover;
     }
 
@@ -40,21 +39,21 @@
 
     .slider-button {
         &-prev {
-            margin-left: -105px;
+            margin-left: rem(-105px);
         }
 
         &-next {
-            margin-right: -105px;
+            margin-right: rem(-105px);
         }
     }
 }
 
 .thumbs-slider {
-    margin-top: 15px;
+    margin-top: rem(15px);
 
     &__thumb {
-        width: 157px;
-        height: 150px;
+        width: rem(157px);
+        height: rem(150px);
         cursor: pointer;
         object-fit: cover;
         opacity: 0.7;

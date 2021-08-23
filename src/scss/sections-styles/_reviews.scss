@@ -2,11 +2,11 @@
 
 .reviews {
     .title {
-        margin-bottom: 50px;
+        margin-bottom: rem(50px);
     }
 
     &-content {
-        max-width: 475px;
+        max-width: rem(475px);
     }
 
     &-items {
@@ -15,51 +15,51 @@
 
     &-item {
         position: relative;
-        min-width: 1080px;
-        height: 534px;
-        padding: 50px 50px 61px 50px;
+        min-width: rem(1080px);
+        height: rem(534px);
+        padding: rem(50px) rem(50px) rem(61px) rem(50px);
         font-size: $fs-xs;
         line-height: $lh-s;
         background-color: $light-50;
-        box-shadow: 0 0 20px rgba($dark-100, 0.15);
+        box-shadow: 0 0 rem(20px) rgba($dark-100, 0.15);
         @include Circle($weight: $fw-light);
     }
 
     &-slider {
-        width: 1180px;
-        height: 600px;
-        padding-top: 15px;
+        width: rem(1180px);
+        height: rem(600px);
+        padding-top: rem(15px);
 
         &__title {
             font-size: $fs-l;
-            line-height: 35px;
+            line-height: rem(35px);
             letter-spacing: $lt-sp;
             @include ArnoPro($weight: $fw-regular);
         }
 
         &__text {
-            margin-top: 15px;
+            margin-top: rem(15px);
         }
 
         &__author {
-            margin-top: 35px;
+            margin-top: rem(35px);
         }
 
         &-photo {
             position: absolute;
-            top: 50px;
+            top: rem(50px);
             right: -50px;
 
             img {
-                width: 518px;
-                height: 534px;
-                filter: drop-shadow(0 0 20px rgba($dark-100, 0.15));
+                width: rem(518px);
+                height: rem(534px);
+                filter: drop-shadow(0 0 rem(20px) rgba($dark-100, 0.15));
             }
         }
     }
 
     &-navigation {
-        left: 30px;
+        left: rem(30px);
     }
 }
 

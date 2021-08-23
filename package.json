@@ -40,7 +40,7 @@
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "penthouse": "^2.3.2",
-    "sass": "^1.35.2",
+    "sass": "~1.32.12",
     "stylelint": "^13.13.1",
     "stylelint-config-recess-order": "^2.4.0",
     "stylelint-config-standard": "^22.0.0",

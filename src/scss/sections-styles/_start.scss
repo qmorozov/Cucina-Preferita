@@ -1,24 +1,25 @@
+// === START ===
+
 .start {
     position: relative;
-    // padding: 55px 0 100px 0;
-    padding: 45px 0 100px 0;
+    padding: rem(45px) 0 rem(100px) 0;
     background-repeat: no-repeat;
     background-size: cover;
 
     &--showroom {
-        height: 700px;
-        padding: 50px 0;
+        height: rem(700px);
+        padding: rem(50px) 0;
 
         .start-content {
-            margin-top: 150px;
+            margin-top: rem(150px);
         }
     }
 
     &--product-page {
-        height: 487px;
+        height: rem(487px);
 
         .start__text {
-            margin-top: 25px;
+            margin-top: rem(25px);
         }
     }
 
@@ -34,8 +35,8 @@
 
     &-content {
         position: relative;
-        max-width: 660px;
-        margin: 80px auto 0;
+        max-width: rem(660px);
+        margin: rem(80px) auto 0;
         color: $light-50;
         text-align: center;
     }
@@ -47,7 +48,7 @@
     }
 
     &__text {
-        margin-top: 50px;
+        margin-top: rem(50px);
         font-size: $fs-m;
         line-height: $lh-l;
         @include Circle($weight: $fw-light);
@@ -59,3 +60,5 @@
         }
     }
 }
+
+// === START ===

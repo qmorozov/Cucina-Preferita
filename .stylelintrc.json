@@ -7,7 +7,7 @@
         "at-rule-empty-line-before": null,
         "no-descending-specificity": null,
         "at-rule-no-unknown": [true, {
-            "ignoreAtRules": ["include", "mixin"]
+            "ignoreAtRules": ["include", "mixin", "function", "return"]
         }]
     }
 }

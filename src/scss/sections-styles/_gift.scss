@@ -25,8 +25,8 @@
         width: 40%;
 
         img {
-            width: 600px;
-            height: 500px;
+            width: rem(600px);
+            height: rem(500px);
         }
     }
 
@@ -39,13 +39,13 @@
     }
 
     &__text {
-        margin-top: 35px;
+        margin-top: rem(35px);
         color: $light-50;
         @include Circle($weight: $fw-light);
     }
 
     &__btn {
-        margin-top: 40px;
+        margin-top: rem(40px);
     }
 }
 

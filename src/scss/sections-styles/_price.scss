@@ -1,8 +1,10 @@
+// === PRICE ===
+
 .price {
-    margin: 80px 0 60px;
+    margin: rem(80px) 0 rem(60px);
 
     &-inner {
-        max-width: 870px;
+        max-width: rem(870px);
         margin: 0 auto;
         font-size: $fs-xs;
         line-height: $lh-m;
@@ -13,7 +15,7 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-        padding: 30px 16px;
+        padding: rem(30px) rem(16px);
 
         &-title,
         &-coat {
@@ -23,7 +25,7 @@
         }
 
         &-text {
-            margin-top: 10px;
+            margin-top: rem(10px);
         }
 
         &-coat {
@@ -51,6 +53,8 @@
     }
 
     &__text {
-        margin-top: 30px;
+        margin-top: rem(30px);
     }
 }
+
+// === PRICE ===

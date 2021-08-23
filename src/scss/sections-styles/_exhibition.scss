@@ -1,8 +1,8 @@
 .exhibition {
     &-slider {
         position: relative;
-        padding-bottom: 25px;
-        margin-top: -140px;
+        padding-bottom: rem(25px);
+        margin-top: rem(-140px);
 
         .swiper-slide {
             width: auto;
@@ -15,8 +15,8 @@
     }
 
     &__item img {
-        width: 390px;
-        height: 330px;
+        width: rem(390px);
+        height: rem(330px);
         object-fit: cover;
     }
 

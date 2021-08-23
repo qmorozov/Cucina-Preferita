@@ -2,7 +2,7 @@
 
 .recall {
     &-inner .pagination {
-        margin-top: 150px;
+        margin-top: rem(150px);
     }
 
     .slider-navigation {
@@ -16,38 +16,38 @@
 }
 
 .recall__item {
-    padding: 50px;
+    padding: rem(50px);
     background-color: $light-50;
     box-shadow: 0 0 20px rgb(69 69 69 / 15%);
 
     &-infO {
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
     }
 
     &-title {
         font-size: $fs-l;
-        line-height: 35px;
+        line-height: rem(35px);
         letter-spacing: $lt-sp;
         @include Circle($weight: $fw-light);
     }
 
     &-text {
-        margin-top: 20px;
+        margin-top: rem(20px);
         @include Circle($weight: $fw-light);
     }
 
     &-name {
-        margin-top: 20px;
+        margin-top: rem(20px);
     }
 
     & + & {
-        margin-top: 140px;
+        margin-top: rem(140px);
     }
 }
 
 .recall-img {
-    margin-top: 20px;
-    margin-bottom: -140px;
+    margin-top: rem(20px);
+    margin-bottom: rem(-140px);
 
     &__link {
         position: relative;
@@ -56,7 +56,7 @@
         justify-content: center;
 
         & + & {
-            margin-left: 10px;
+            margin-left: rem(10px);
         }
 
         &:nth-child(5n + 5) {
@@ -84,8 +84,8 @@
 
     &__item {
         display: flex;
-        width: 250px;
-        height: 250px;
+        width: rem(250px);
+        height: rem(250px);
         object-fit: cover;
     }
 

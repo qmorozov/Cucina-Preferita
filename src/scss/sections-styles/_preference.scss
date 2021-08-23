@@ -2,12 +2,12 @@
 
 .preference {
     &-top {
-        margin-bottom: 80px;
+        margin-bottom: rem(80px);
     }
 
     &__text {
         width: 100%;
-        max-width: 980px;
+        max-width: rem(980px);
         margin: 0 auto;
         font-weight: $fw-light;
         text-align: center;
@@ -21,14 +21,14 @@
 
     &-item {
         width: 100%;
-        max-width: 255px;
+        max-width: rem(255px);
 
         &__img {
-            margin-bottom: 30px;
+            margin-bottom: rem(30px);
 
             img {
-                width: 80px;
-                height: 80px;
+                width: rem(80px);
+                height: rem(80px);
             }
         }
 
