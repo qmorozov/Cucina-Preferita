@@ -142,7 +142,7 @@ body {
 // === ALL BTN ON SITE ===
 
 .btn {
-    display: block;
+    display: inline-block;
     max-width: 100%;
     padding: rem(24px) rem(44px);
     @include resetBtn;

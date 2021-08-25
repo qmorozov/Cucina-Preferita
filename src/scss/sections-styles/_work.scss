@@ -13,6 +13,9 @@
     }
 
     &__btn {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
         margin: rem(60px) auto 0;
     }
 }
