@@ -298,13 +298,13 @@ window.onload = function () {
 
     // === ANCHORS ===
 
-    const anchors = document.querySelectorAll('a[href*="#"]');
+    const anchors = document.querySelectorAll('a[data-href*="#"]');
 
     for (let anchor of anchors) {
         anchor.addEventListener('click', function (event) {
             event.preventDefault();
 
-            const blockID = anchor.getAttribute('href');
+            const blockID = anchor.getAttribute('data-href');
 
             document.querySelector('' + blockID).scrollIntoView({
                 behavior: 'smooth',

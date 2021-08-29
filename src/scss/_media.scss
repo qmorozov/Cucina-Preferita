@@ -135,7 +135,7 @@
 
     // === ADVICE ===
     .advice-claim {
-        max-width: 420px;
+        max-width: 405px;
     }
 
     // === START - PAGE ===
@@ -762,7 +762,7 @@
                 margin: rem(43px) auto 0;
 
                 &::before {
-                    height: 70%;
+                    height: calc(100% - 85px);
                 }
             }
 
@@ -933,11 +933,6 @@
         }
 
         &-info {
-            &__items::before {
-                top: 8%;
-                height: 73%;
-            }
-
             &__item {
                 max-width: rem(254px);
             }
@@ -1317,10 +1312,6 @@
 
             &__items {
                 margin: rem(40px) 0 0 auto;
-
-                &::before {
-                    height: 71%;
-                }
             }
 
             &__img {

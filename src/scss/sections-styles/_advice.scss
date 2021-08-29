@@ -14,7 +14,8 @@
 
     &-inner {
         position: relative;
-        height: rem(844px);
+        // height: rem(844px);
+        height: fit-content;
         padding: rem(90px) 0;
         color: $light-50;
     }
@@ -144,10 +145,10 @@
 
         &::before {
             position: absolute;
-            top: 10%;
+            top: 25px;
             left: rem(-45px);
             width: rem(2px);
-            height: 75%;
+            height: calc(100% - 65px);
             content: "";
             background-color: $light-50;
         }
