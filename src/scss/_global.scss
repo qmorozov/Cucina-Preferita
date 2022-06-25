@@ -48,13 +48,6 @@ img {
     object-fit: cover;
 }
 
-a,
-button,
-input,
-textarea {
-    outline: none;
-}
-
 h1,
 h2,
 h3,
@@ -706,6 +699,7 @@ body {
     cursor: pointer;
     visibility: visible;
     background-color: $dark-100;
+    border: none;
     opacity: 1;
     transition: $transition;
 

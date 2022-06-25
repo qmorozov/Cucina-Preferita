@@ -20,6 +20,7 @@ const htmlminify = require("gulp-html-minify");
 const gulpStylelint = require('gulp-stylelint');
 const concat = require('gulp-concat');
 const cssmin = require('gulp-cssmin');
+const webp = require('gulp-webp');
 
 // === FONTS from TTF to WOFF / WOFF2 ===
 const fonts = () => {
@@ -101,6 +102,7 @@ const htmlInclude = () => {
 // === MOVE PHOTOS TO THE APP FOLDER ===
 const imgToApp = () => {
     return src('./src/images/*/**.*')
+        .pipe(webp())
         .pipe(dest('./app/images'))
 }
 
