@@ -3,5 +3,7 @@
 .LSOverride
 .vs
 
+package-lock.json
+
 node_modules/
 .vscode/
