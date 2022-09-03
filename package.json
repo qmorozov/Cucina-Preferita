@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "config": {
+    "puppeteer_skip_chromium_download": true
+  },
   "author": "Andrew Morozov",
   "license": "ISC",
   "devDependencies": {
